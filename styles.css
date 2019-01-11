@@ -21,24 +21,113 @@ html, body {
 		'foot foot foot foot';
 }
 
-.logo {
-	grid-area: logo;
+
+.mobile-bar {
+	width: 100vw;
+	min-width: 100vw;
+	position: fixed;
+	top: 0;
+	left: 0;
 	background-color: #002728;
 }
 
-.logo img {
-	 	width: 55vw;
-		height: 12vh;
-		margin-top: 0vh;
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
+.menu-icon {
+	color: white;
+	margin: 4vw;
 }
 
+#menu-button, #menu-button-close {
+	float: left;
+	position: relative;
+	top: 0;
+	left: 0;
+	color: white;
+}
 
-.navigation {
+#menu-button-close {
+	margin: 4vw ;
+}
+
+#menu-cart {
+	float: right;
+}
+
+.logo {
+	grid-area: logo;
+	background-color: #002728;
+	width: 100vw;
+	margin: 0 auto;
+}
+ 
+.logo img {
+	width: 50vw;
+	height: 12vh;
+	padding: 10px 0;
+	display: block;
+    margin: 0 auto;
+}
+
+nav {
+	background-color: #002728;
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+	transform: translateX(-100%);
+    transition: all .3s ease-out;
+    opacity: .7;
+ 	z-index: 10;
 	grid-area: nav;
 }
+
+.navigation-active nav {
+    transform: translateX(0);
+    opacity: 1;
+	z-index: 100;
+}
+
+.navigation-active #menu-button {
+    opacity: 0;
+}
+
+nav ul {
+	list-style-type: none;
+	padding: 10vh 0 0;
+	
+}
+
+nav ul li {
+	margin: 20px;
+}
+
+nav ul li a {
+	text-decoration: none;
+	font-size: 20px;
+	font-family: 'Lato', sans-serif;
+	color: white;
+	margin: 20px;
+}
+
+.cart {
+	font-size: 2em;
+	font-family: 'Lato', sans-serif;
+	color: white;
+	margin: 0 40px;
+	padding: 0;
+}
+
+.cart a {
+	padding: 0 10px;
+	margin: 0;
+}
+
+.cart a::after {
+	content: "Kurv";
+	padding: 0 10px;
+	margin: 0;
+}
+
 
 .citat {
 	grid-area: citat;
@@ -67,7 +156,7 @@ html, body {
 
 .banner img { 
 	width: 100vw;
-	height: 40vh;
+	padding-top: 10vh;
 }
 
 .tekst-om-firma {
@@ -100,21 +189,188 @@ html, body {
 	left: 18px;
 }
 
-.footer {
+/* --- KONTAKT --- */
+
+.grid-container-kontakt {
+	display: grid;
+	grid-template-areas: 
+		'logo logo logo logo'
+		'nav nav nav nav'
+		'billede-af-stol billede-af-stol billede-af-stol billede-af-stol'
+		'titel1 titel1 titel1 titel1'
+		'kontakt-info kontakt-info kontakt-info kontakt-info'
+		'titel2 titel2 titel2 titel2'
+		'skriv-til-os skriv-til-os skriv-til-os skriv-til-os'
+		'foot foot foot foot';
+}
+
+
+.billede-af-stol {
+	grid-area: billede-af-stol;
+}
+
+.billede-af-stol img {
+	width: 100vw;
+	height: 60vh;
+}
+
+.titel1 {
+	grid-area: titel1;
+	width: 99vw;
+	height: 10vh;
+	z-index: -1;
+}
+
+.titel1 h2 {
+	color: #606060;
+	text-align: center; 
+	position: relative;
+}
+
+.titel1 h2 span {
+	background: #fff;
+	padding: 0px 20px;
+	position: relative;
+	z-index: 1;
+}
+
+.titel1 h2:before {
+	background: #ddd;
+	content: "";
+	display: block;
+	height: 0.3vh;
+	position: absolute;
+	top: 2.5vh;
+	width: 90vw;
+	left: 5vw;
+}
+
+.kontakt-info {
+	grid-area: kontakt-info;
+	width: 90vw;
+	height: 25vh;
+	margin-left: 5vw;
+}
+
+.ikoner {	
+	background-color: #f2f2f2;
+	display: grid; 
+	grid-template-areas: 
+		'adresse email'
+		'telefon facebook';
+}
+
+.adresse-ikon {
+	grid-area: adresse;
+	margin-left: 4vw; 
+	margin-top: 2vh;
+}
+
+.telefon-ikon {
+	grid-area: telefon;
+	margin-left: 4vw; 
+}
+
+.email-ikon {
+	grid-area: email;
+	margin-top: 2vh;
+}
+
+.facebook-ikon {
+	grid-area: facebook;
+}
+
+.titel2 {
+	grid-area: titel2;
+	width: 99vw;
+	height: 10vh;
+	z-index: -1;
+}
+
+.titel2 h2 {
+	color: #606060;
+	text-align: center; 
+	position: relative;
+}
+
+.titel2 h2 span {
+	background: #fff;
+	padding: 0px 20px;
+	position: relative;
+	z-index: 1;
+}
+
+.titel2 h2:before {
+	background: #ddd;
+	content: "";
+	display: block;
+	height: 0.3vh;
+	position: absolute;
+	top: 2.5vh;
+	width: 90vw;
+	left: 5vw;
+}
+
+.skriv-til-os {
+	grid-area: skriv-til-os;
+	width: 90vw;
+	height: 65vh;
+	margin-left: 5vw;
+}
+
+.kontakt-formular {
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	padding: 30px;
+}
+
+input[type=text], select, textarea {
+	width: 75vw;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin-top: 2vh;
+	margin-bottom: 2vh;
+	resize: vertical;
+	font-family: 'Lato', sans-serif;
+}
+
+input[type=submit] {
+	background-color: #002728;
+	color: white;
+	padding: 1.5vh 5vw;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-family: 'Lato', sans-serif;
+}
+
+/* --- FOOTER --- */
+
+footer {
 	grid-area: foot;
 	background-color: #002728;
 	width: 100vw;
 	height: 12vh;
 }
 
-.footer p {
+footer p {
 	color: white;
 	font-family: 'Lato', sans-serif;
 	margin-left: 5vw;
 }
 
 
-@media (min-width: 800px) {
+/* style for tablet (portrait) and upwards */
+@media screen and (min-width: 768px) {
+	
+}
+
+
+
+
+/* style for tablet (landscape) and upwards */
+@media screen and (min-width: 1024px) {
 	.grid-container {
 		grid-template-areas:
 			'logo logo logo logo'
@@ -130,34 +386,48 @@ html, body {
 	}
 	
 	.logo img {
-	 	width: 85vw;
+	 	width: 100vw;
 		height: 10vh;
-		margin-top: 15px;
+		padding-top: 10px;
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
 	}
 	
+	#menu-button, #menu-button-close, #menu-cart {
+		display: none;
+	}
 	
-	ul {
+	nav {
+		position: fixed;
+		top: 0;
+		left: 0;
+		transform: translateX(0);
+		transition: none;
+		background-color: transparent;
+		opacity: 1;
+		padding-top: 10vh;
+	}
+	
+	nav ul {
 		list-style-type: none;
 		margin: 0;
-		padding: 0;
+		padding: 0 10vw;
 		overflow: hidden;
 		background-color: #002728;
-		height: 10vh;
 		width: 100vw;
 	}
 
-	li {
+	nav ul li {
 	 	float: left;
-		position: relative;
+		margin: 0;
 		left: 82px;
 	}
 
-	li a {
+	nav ul li a {
 		display: inline-block;
-		padding: 20px 20px; 
+		padding: 14px 20px;
+		margin: 0;
 		text-align: center;
 		text-decoration: none;
 		font-size: 15px;
@@ -165,29 +435,37 @@ html, body {
 		color: white;
 	}
 
-	li a:hover {
+	nav ul li a:hover {
 		background-color: #144041;
 		color: white;
 	}
 	
-	.forside {
+	.cart {
+		font-size: 1em;
+		float: right;
+		margin: 0 20px;
+	}
+		
+	li i {
+		color: white;
+		margin: 14px 0px;
+	}
+	
+	li.active a {
 		color: #D6A900;
 	}
 	
-	.forside:hover {
+	.active:hover {
 		background-color: #002728;
 		color: #D6A900;
 	}
 	
-	li i {
-		color: white;
-		margin: 20px 0px 14px 540px;
-	}
+
 	
 	.citat {
 		width: 35vw;
 		height: 50vh;
-		margin-top: -70vh;
+		margin-top: -50vh;
 		margin-left: 8vw; 
 	}
 	
@@ -197,8 +475,8 @@ html, body {
 	
 	.banner img {
 		width: 100vw;
-		height: 100vh;
 		float: right;
+		padding-top: 15vh;
 	}
 	
 	.tekst-om-firma {
@@ -231,7 +509,146 @@ html, body {
 		left: 86px;
 	}
 	
-	.footer {
+	/* --- KONTAKT --- */
+	.grid-container-kontakt {
+		display: grid;
+		grid-template-areas: 
+			'logo logo logo logo'
+			'nav nav nav nav'
+			'billede-af-stol billede-af-stol titel1 titel1'
+			'billede-af-stol billede-af-stol kontakt-info kontakt-info'
+			'billede-af-stol billede-af-stol titel2 titel2'
+			'billede-af-stol billede-af-stol skriv-til-os skriv-til-os'
+			'foot foot foot foot';
+}
+	
+	.kontakt {
+		color: #D6A900;
+	}
+	
+	.kontakt:hover {
+		background-color: #002728;
+		color: #D6A900;
+	}
+	
+	.billede-af-stol img{
+		width: 51vw;
+		height: 115vh;
+		margin-top: 15vh;
+	}
+	
+	.titel1 {
+		width: 47vw;
+		height: 12vh;
+		margin-top: 17vh;
+		margin-left: -10vw;
+		z-index: -1;
+	}
+
+	.titel1 h2 {
+		color: #606060;
+		text-align: center; 
+		position: relative;
+	}
+
+	.titel1 h2 span {
+		background: #fff;
+		padding: 0px 20px;
+		position: relative;
+		z-index: 1;
+	}
+
+	.titel1 h2:before {
+		background: #ddd;
+		content: "";
+		display: block;
+		height: 0.3vh;
+		position: absolute;
+		top: 2.5vh;
+		width: 38vw;
+		left: 5vw;
+	}
+	
+	.kontakt-info {
+		grid-area: kontakt-info;
+		width: 38vw;
+		height: 28vh;
+		margin-left: -5vw;
+	}
+	
+	.titel2 {
+		width: 47vw;
+		height: 12vh;
+		margin-left: -10vw;
+		z-index: -1;
+	}
+
+	.titel2 h2 {
+		color: #606060;
+		text-align: center; 
+		position: relative;
+	}
+
+	.titel2 h2 span {
+		background: #fff;
+		padding: 0px 20px;
+		position: relative;
+		z-index: 1;
+	}
+
+	.titel2 h2:before {
+		background: #ddd;
+		content: "";
+		display: block;
+		height: 0.3vh;
+		position: absolute;
+		top: 2.5vh;
+		width: 38vw;
+		left: 5vw;
+	}
+	
+	.skriv-til-os {
+		grid-area: skriv-til-os;
+		width: 38vw;
+		height: 70vh;
+		margin-left: -5vw;
+	}
+	
+	.kontakt-formular {
+		border-radius: 5px;
+		background-color: #f2f2f2;
+		padding: 30px;
+	}
+
+	input[type=text], select, textarea {
+		width: 33.5vw;
+		padding: 12px;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		margin-top: 2vh;
+		margin-bottom: 2vh;
+		resize: vertical;
+		font-family: 'Lato', sans-serif;
+	}
+
+	input[type=submit] {
+		background-color: #002728;
+		color: white;
+		margin-top: 2vh;
+		padding: 2vh 1.5vw;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		font-family: 'Lato', sans-serif;
+	}
+
+	input[type=submit]:hover {
+		background-color: #144041;
+	}
+	
+	/* --- FOOTER ---*/
+	
+	footer {
 		width: 100vw;
 		height: 10vh;
 		text-align: center;
