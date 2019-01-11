@@ -1,0 +1,382 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+	overflow-x: hidden;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-areas: 
+		'logo logo logo logo'
+		'nav nav nav nav'
+		'billede-af-stol billede-af-stol billede-af-stol billede-af-stol'
+		'titel1 titel1 titel1 titel1'
+		'kontakt-info kontakt-info kontakt-info kontakt-info'
+		'titel2 titel2 titel2 titel2'
+		'skriv-til-os skriv-til-os skriv-til-os skriv-til-os'
+		'foot foot foot foot';
+}
+
+.logo {
+	grid-area: logo;
+	background-color: #002728;
+}
+
+.logo img {
+	 	width: 55vw;
+		height: 12vh;
+		margin-top: 0vh;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+}
+
+.navigation {
+	grid-area: nav;
+}
+
+.billede-af-stol {
+	grid-area: billede-af-stol;
+}
+
+.billede-af-stol img {
+	width: 100vw;
+	height: 60vh;
+}
+
+.titel1 {
+	grid-area: titel1;
+	width: 99vw;
+	height: 10vh;
+}
+
+.titel1 h2 {
+	color: #606060;
+	text-align: center; 
+	position: relative;
+}
+
+.titel1 h2 span {
+	background: #fff;
+	padding: 0px 20px;
+	position: relative;
+	z-index: 1;
+}
+
+.titel1 h2:before {
+	background: #ddd;
+	content: "";
+	display: block;
+	height: 0.3vh;
+	position: absolute;
+	top: 2.5vh;
+	width: 90vw;
+	left: 5vw;
+}
+
+.kontakt-info {
+	grid-area: kontakt-info;
+	width: 90vw;
+	height: 25vh;
+	margin-left: 5vw;
+}
+
+.ikoner {	
+	background-color: #f2f2f2;
+	display: grid; 
+	grid-template-areas: 
+		'adresse email'
+		'telefon facebook';
+}
+
+.adresse-ikon {
+	grid-area: adresse;
+	margin-left: 4vw; 
+	margin-top: 2vh;
+}
+
+.telefon-ikon {
+	grid-area: telefon;
+	margin-left: 4vw; 
+}
+
+.email-ikon {
+	grid-area: email;
+	margin-top: 2vh;
+}
+
+.facebook-ikon {
+	grid-area: facebook;
+}
+
+.titel2 {
+	grid-area: titel2;
+	width: 99vw;
+	height: 10vh;
+}
+
+.titel2 h2 {
+	color: #606060;
+	text-align: center; 
+	position: relative;
+}
+
+.titel2 h2 span {
+	background: #fff;
+	padding: 0px 20px;
+	position: relative;
+	z-index: 1;
+}
+
+.titel2 h2:before {
+	background: #ddd;
+	content: "";
+	display: block;
+	height: 0.3vh;
+	position: absolute;
+	top: 2.5vh;
+	width: 90vw;
+	left: 5vw;
+}
+
+.skriv-til-os {
+	grid-area: skriv-til-os;
+	width: 90vw;
+	height: 65vh;
+	margin-left: 5vw;
+}
+
+.kontakt-formular {
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	padding: 30px;
+}
+
+input[type=text], select, textarea {
+	width: 75vw;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin-top: 2vh;
+	margin-bottom: 2vh;
+	resize: vertical;
+	font-family: 'Lato', sans-serif;
+}
+
+input[type=submit] {
+	background-color: #002728;
+	color: white;
+	padding: 1.5vh 5vw;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-family: 'Lato', sans-serif;
+}
+
+.footer {
+	grid-area: foot;
+	background-color: #002728;
+	width: 100vw;
+	height: 10vh;
+}
+
+.footer p {
+	color: white;
+	font-family: 'Lato', sans-serif;
+}
+
+
+@media (min-width: 800px) {
+	.grid-container {
+		grid-template-areas:
+			'logo logo logo logo'
+			'nav nav nav nav'
+			'billede-af-stol billede-af-stol titel1 titel1'
+			'billede-af-stol billede-af-stol kontakt-info kontakt-info'
+			'billede-af-stol billede-af-stol titel2 titel2'
+			'billede-af-stol billede-af-stol skriv-til-os skriv-til-os'
+			'foot foot foot foot';
+	}
+	
+	.logo {
+		width: 100vw;
+	}
+	
+	.logo img {
+	 	width: 85vw;
+		height: 10vh;
+		margin-top: 2vh;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: #002728;
+		height: 10vh;
+		width: 100vw;
+	}
+
+	li {
+	 	float: left;
+		position: relative;
+		left: 82px;
+	}
+
+	li a {
+		display: inline-block;
+		padding: 20px 20px; 
+		text-align: center;
+		text-decoration: none;
+		font-size: 15px;
+		font-family: 'Lato', sans-serif;
+		color: white;
+	}
+
+	li a:hover {
+		background-color: #144041;
+		color: white;
+	}
+	
+	li i {
+		color: white;
+		margin: 20px 0px 14px 540px;
+	}
+	
+	.kontakt {
+		color: #D6A900;
+	}
+	
+	.kontakt:hover {
+		background-color: #002728;
+		color: #D6A900;
+	}
+	
+	.billede-af-stol img{
+		width: 51vw;
+		height: 115vh;
+		margin-top: 15vh;
+	}
+	
+	.titel1 {
+		width: 47vw;
+		height: 12vh;
+		margin-top: 8vh;
+		margin-left: -10vw;
+	}
+
+	.titel1 h2 {
+		color: #606060;
+		text-align: center; 
+		position: relative;
+	}
+
+	.titel1 h2 span {
+		background: #fff;
+		padding: 0px 20px;
+		position: relative;
+		z-index: 1;
+	}
+
+	.titel1 h2:before {
+		background: #ddd;
+		content: "";
+		display: block;
+		height: 0.3vh;
+		position: absolute;
+		top: 2.5vh;
+		width: 38vw;
+		left: 5vw;
+	}
+	
+	.kontakt-info {
+		grid-area: kontakt-info;
+		width: 38vw;
+		height: 28vh;
+		margin-left: -5vw;
+	}
+	
+	.titel2 {
+		width: 47vw;
+		height: 12vh;
+		margin-left: -10vw;
+	}
+
+	.titel2 h2 {
+		color: #606060;
+		text-align: center; 
+		position: relative;
+	}
+
+	.titel2 h2 span {
+		background: #fff;
+		padding: 0px 20px;
+		position: relative;
+		z-index: 1;
+	}
+
+	.titel2 h2:before {
+		background: #ddd;
+		content: "";
+		display: block;
+		height: 0.3vh;
+		position: absolute;
+		top: 2.5vh;
+		width: 38vw;
+		left: 5vw;
+	}
+	
+	.skriv-til-os {
+		grid-area: skriv-til-os;
+		width: 38vw;
+		height: 70vh;
+		margin-left: -5vw;
+	}
+	
+	.kontakt-formular {
+		border-radius: 5px;
+		background-color: #f2f2f2;
+		padding: 30px;
+	}
+
+	input[type=text], select, textarea {
+		width: 33.5vw;
+		padding: 12px;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		margin-top: 2vh;
+		margin-bottom: 2vh;
+		resize: vertical;
+		font-family: 'Lato', sans-serif;
+	}
+
+	input[type=submit] {
+		background-color: #002728;
+		color: white;
+		margin-top: 2vh;
+		padding: 2vh 1.5vw;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		font-family: 'Lato', sans-serif;
+	}
+
+	input[type=submit]:hover {
+		background-color: #144041;
+	}
+	
+	.footer p {
+		text-align: center;
+	}
+	
+}
