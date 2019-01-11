@@ -8,6 +8,7 @@
 html, body {
 	margin: 0;
 	overflow-x: hidden;
+	font-family: 'Lato', sans-serif;
 }
 
 .grid-container {
@@ -188,6 +189,18 @@ nav ul li a {
 	width: 90vw;
 	left: 18px;
 }
+
+/* --- STOL --- */
+.grid-container-stol {
+	display: grid;
+	
+}
+
+.breadcrumbs {
+	display: none;
+	
+}
+
 
 /* --- KONTAKT --- */
 
@@ -402,6 +415,7 @@ footer p {
 		position: fixed;
 		top: 0;
 		left: 0;
+		height: 15vh;
 		transform: translateX(0);
 		transition: none;
 		background-color: transparent;
@@ -509,7 +523,87 @@ footer p {
 		left: 86px;
 	}
 	
-	/* --- KONTAKT --- */
+	/* --- STOL ------------------------------------------------------------------------- */
+	.grid-container-stol {
+		margin: 0 10vw;
+		padding: 0 20px;
+		display: grid;
+		grid-template-areas: 
+			'crumbs crumbs crumbs crumbs'
+			'main-image main-image speci speci'
+			'g1 g2 speci speci'
+			'g3 g4 speci speci';
+	}
+	
+	.crumbs {grid-area: crumbs}
+
+	.breadcrumbs {
+		display: block;
+		margin-top: 17vh;
+		color: #A7A7A7;
+	}
+
+	.breadcrumbs a {
+		color: #A7A7A7;
+		text-decoration: none;
+	}
+	
+	.breadcrumbs a:hover {
+		text-decoration: underline;
+	}
+	
+	.main-image {
+		grid-area: main-image;
+	}
+	
+	.main-image img {
+		width: 40vw;
+		padding: 0 10px 10px 0;
+	}
+	
+	.gallery1{grid-area: g1;}
+	.gallery2{grid-area: g2;}
+	.gallery3{grid-area: g3;}
+	.gallery4{grid-area: g4;}
+	
+	.gallery-images {
+		width: 40vw;
+	}
+	
+	.gallery-images img {
+		width: 20vw;
+		padding: 5px;
+		margin-left: -5px;
+	}
+	
+	.specifications {
+		grid-area: speci;
+		width: 35vw;
+		background-color: #F5F5F5;
+		padding: 40px 50px;
+		margin-bottom: 5px;
+	}
+	
+	.specifications h2 {
+		margin: 0;
+	}
+	
+	.specifications h4 {
+		margin-top: 2em;
+	}
+	
+	.color-choice {
+		width: 100%;
+	}
+	
+	.color-choice img {
+		width: 5vw;
+		margin: 0 4% 0 0;
+		border: 1px solid black;
+	}
+	
+	
+	/* --- KONTAKT --------------------------------------------------------------------- */
 	.grid-container-kontakt {
 		display: grid;
 		grid-template-areas: 
