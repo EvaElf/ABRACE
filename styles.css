@@ -190,10 +190,19 @@ nav ul li a {
 	left: 18px;
 }
 
-/* --- STOL --- */
+/* --- STOL ------------------------------------------------------------- */
 .grid-container-stol {
+/*	margin: 0 10vw; 
+	padding: 0 20px;*/
 	display: grid;
-	
+	grid-template-areas: 
+		'crumbs crumbs crumbs crumbs'
+		'main-image main-image main-image main-image'
+		'g1 g1 g2 g2'
+		'g3 g3 g4 g4'
+		'speci speci speci speci'
+		'other other other other'
+		'other-items other-items other-items other-items';
 }
 
 .breadcrumbs {
@@ -201,8 +210,105 @@ nav ul li a {
 	
 }
 
+.crumbs {
+	grid-area: crumbs;
+	margin: 15vh 4vw 0;
+}
 
-/* --- KONTAKT --- */
+.main-image {
+	grid-area: main-image;
+}
+
+.main-image img {
+	width: 100vw;
+	padding-bottom: 10px;
+}
+
+#gallery1{grid-area: g1;}
+#gallery2{grid-area: g2;}
+#gallery3{grid-area: g3;}
+#gallery4{grid-area: g4;}
+
+.gallery-images {
+	width: 100vw;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.gallery-images img {
+	width: 45vw;
+	padding: 5px;
+	
+}
+
+.specifications {
+	grid-area: speci;
+	width: 100vw;
+	background-color: #F5F5F5;
+	padding: 6vw;
+	margin-bottom: 5px;
+}
+
+.specifications h2 {
+	margin: 0;
+}
+
+.specifications h4 {
+	margin-top: 2em;
+}
+
+.color-choice {
+	width: 100%;
+}
+
+.color-choice img {
+	width: 19vw;
+	margin: 0 2vw 0 0;
+	border: 1px solid black;
+	
+}
+
+#price-text {
+	display: inline-block;
+	float: left;
+}
+
+#buy {
+	display: inline-block;
+	float: right;
+	background-color: #002728;
+	color: white;
+	padding: 12px 5vw;
+	margin-top: 20px;
+}
+
+#buy h4 {
+	margin: 0;
+}
+
+.other-text {
+	grid-area: other;
+	margin: 40px 4vw 20px;
+	
+}
+
+
+.other-items {
+	grid-area: other-items;
+	width: 100vw;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.other-items img {
+	display: inline-block;
+	width: 45vw;
+	padding: 5px;
+	margin-left: -5px;
+}
+
+
+/* --- KONTAKT ------------------------------------------------------- */
 
 .grid-container-kontakt {
 	display: grid;
@@ -532,10 +638,15 @@ footer p {
 			'crumbs crumbs crumbs crumbs'
 			'main-image main-image speci speci'
 			'g1 g2 speci speci'
-			'g3 g4 speci speci';
+			'g3 g4 speci speci'
+			'other other other other'
+			'other-items other-items other-items other-items';
 	}
 	
-	.crumbs {grid-area: crumbs}
+	.crumbs {
+		
+		margin: 0;
+	}
 
 	.breadcrumbs {
 		display: block;
@@ -552,22 +663,15 @@ footer p {
 		text-decoration: underline;
 	}
 	
-	.main-image {
-		grid-area: main-image;
-	}
-	
 	.main-image img {
 		width: 40vw;
 		padding: 0 10px 10px 0;
 	}
 	
-	.gallery1{grid-area: g1;}
-	.gallery2{grid-area: g2;}
-	.gallery3{grid-area: g3;}
-	.gallery4{grid-area: g4;}
-	
 	.gallery-images {
 		width: 40vw;
+		margin: 0;
+		text-align: left;
 	}
 	
 	.gallery-images img {
@@ -577,19 +681,8 @@ footer p {
 	}
 	
 	.specifications {
-		grid-area: speci;
-		width: 35vw;
-		background-color: #F5F5F5;
+		width: 38vw;
 		padding: 40px 50px;
-		margin-bottom: 5px;
-	}
-	
-	.specifications h2 {
-		margin: 0;
-	}
-	
-	.specifications h4 {
-		margin-top: 2em;
 	}
 	
 	.color-choice {
@@ -599,8 +692,39 @@ footer p {
 	.color-choice img {
 		width: 5vw;
 		margin: 0 4% 0 0;
-		border: 1px solid black;
 	}
+	
+	.color-choice img:hover {
+		cursor: pointer;
+	}
+
+	
+	#buy {
+		display: inline-block;
+		float: right;
+		background-color: #002728;
+		color: white;
+		padding: 12px 5vw;
+		margin-top: 20px;
+	}
+	
+	.other-text {
+		margin-top: 40px;
+	}
+	
+	.other-items {
+		width: 80vw;
+	}
+	
+	.other-items img {
+		width: 20vw;
+	}
+	
+
+	
+	/*#other-tyngde {grid-area: tyngde;}
+	#other-poncho {grid-area: poncho;}
+	#other-kramme {grid-area: kramme;}*/
 	
 	
 	/* --- KONTAKT --------------------------------------------------------------------- */
