@@ -360,9 +360,180 @@ footer p {
 	margin-left: 5vw;
 }
 
+/* --- PRODUKTER --- */
+
+
+.productchair{
+	grid-area: chair;
+	width: 100vw;
+	margin-bottom: 5vh;
+}
+
+.chairpic{
+	margin-bottom: 0;
+	width: 100vw;
+	margin-top: 7vh;
+	padding: 4vh 0vw 0vh 0;
+	border: solid #A1A1A1;
+	background-color: #E7E7E1;
+}
+
+.productswing{
+	grid-area: swing;
+	margin-bottom: 5vh;
+}
+
+.productblanket{
+	grid-area: blanket;
+	margin-bottom: 5vh;
+}
+
+.productponcho{
+	grid-area: poncho;
+	margin-bottom: 5vh;
+}
+
+.productspillow{
+	grid-area: pillow;
+	margin-bottom: 5vh;
+}
+
+.productstitles, .productstitlechair{
+	font-family: 'Lato', sans-serif;
+	font-size: 2.5vh;
+	padding-left: 5vw;
+	color: #000;
+	
+
+}
+
+.read-more-button{
+	font-family: 'Lato', sans-serif;
+	font-size: 2.5vh;
+	width:110px;
+	float: right;
+	margin-top: -7vh;
+	margin-right: 10vw;
+	padding: 1.5vh;
+	color: #FFF;
+	background-color: #002728;
+	text-align: center;
+}
+
+a{
+	text-decoration:none;
+}
+
+.productpic{
+	border: solid #A1A1A1;
+	width: 100vw;
+	background-color: #E7E7E1;
+}
+
+#torighttitle, #torighttitle1{
+		margin-bottom: -0.7vh;
+	}
+
+
+.grid-container-produkter{
+	display: grid;
+	grid-template-areas: 
+		'logo logo'
+		'nav nav'
+		'chair chair'
+		'swing swing'
+		'blanket blanket'
+		'poncho poncho'
+		'pillow pillow'
+		'foot foot';
+}
+
+
+#toright,#toright1{
+		top: 0vh;
+	}
+
+.kurvtekst{
+	margin-top: 10vh;
+	margin-left: 5vw;
+	width: 90vw;
+	height: 50vh;
+	font-size: 3vh;
+	font-family: 'Kozuka Gothic PR6N', sans-serif;
+	color: #000;
+	margin-bottom: 30vh;
+}
+
+.tilbageknap{
+	color: #FFF;
+	background-color: #002728;
+	padding: 2vh 3vw;
+	font-size: 2.5vh;
+}
 
 /* style for tablet (portrait) and upwards */
 @media screen and (min-width: 768px) {
+	
+	
+	/* --- PRODUKTER ---*/
+	.grid-container-produkter{
+	grid-template-areas: 
+		'logo logo logo logo'
+		'nav nav nav nav'
+		'chair chair chair chair'
+		'swing swing blanket blanket'
+		'poncho poncho pillow pillow'
+		'foot foot foot foot';
+}
+
+	.productpic{
+		width: 40vw;
+		margin: -5vh 4vw;
+		z-index: -3;
+		position: relative;
+	}
+	
+	.chairpic{
+		width: 90vw;
+		margin: 5vh 4vw -13vh;
+		padding: 8vh 0vw 0;
+		z-index: -3;
+		position: relative;
+	}
+	
+	.read-more-button{
+		font-size: 3vh;
+		width: 150px;
+		position: relative;
+		z-index: -1;
+		right: -2vw;
+		top:-5vh;
+	}
+	
+	#chairbutton{
+		top: -5vh;
+	}
+	
+	.productstitles{
+		top:-50vh;
+		left: 0.1vw;
+		position: relative;
+		z-index: -1;
+	}
+	
+	.productstitlechair{
+		top:0vh;
+		left:2vw;
+		position: relative;
+		z-index: -1;
+		font-size: 5vh;
+	}
+	
+	.kurvtekst{
+		text-align: center;
+		font-size: 4vh;
+	}
+	
 	
 }
 
@@ -380,6 +551,7 @@ footer p {
 			'tekst-om-firma tekst-om-firma tekst-om-firma tekst-om-firma'
 			'foot foot foot foot';
 	}
+	
 	
 	.logo {
 		width: 100vw;
@@ -511,7 +683,6 @@ footer p {
 	
 	/* --- KONTAKT --- */
 	.grid-container-kontakt {
-		display: grid;
 		grid-template-areas: 
 			'logo logo logo logo'
 			'nav nav nav nav'
@@ -653,4 +824,75 @@ footer p {
 		height: 10vh;
 		text-align: center;
 	}
+	
+	
+	/* --- PRODUKTER ---*/
+	
+	.grid-container-kontakt {
+		grid-template-areas: 
+		'logo logo logo logo'
+		'nav nav nav nav'
+		'chair chair chair chair'
+		'swing swing blanket blanket'
+		'poncho poncho pillow pillow'
+		'foot foot foot foot';
 }
+	.productpic{
+		width: 30vw;
+		margin: -5vh 0vw -5vh 12vw;
+	}
+	
+	#toright,#toright1{
+		width: 30vw;
+		margin-left: 4vw;
+	}
+	
+	.chairpic{
+		width: 76vw;
+		margin: 5vh 12vw -13vh;
+		padding: 8vh 0vw 0;
+	}
+	
+	.read-more-button{
+		font-size: 3vh;
+		width: auto;
+		padding: 0.5vw;
+		right: 3vw;
+		top:-5vh;
+	}
+	
+	.read-more-button:hover {
+		background-color: #144041;
+	}
+	
+	#chairbutton{
+		top: -5vh;
+		padding: 0.5vw;
+		width: auto;
+	}
+
+	
+	.productstitles{
+		top:-50vh; 
+		left: 8vw;
+		
+	}
+	
+	#torighttitle, #torighttitle1{
+		left: 0;
+		margin-bottom: -0.5vh;
+	}
+	
+	.productstitlechair{
+		top:-1vh;
+		left:10vw;
+	}
+	
+	.tilbageknap:hover{
+		background-color: #144041;
+	}
+	
+}
+
+
+
