@@ -246,7 +246,7 @@ nav ul li a {
 	width: 100vw;
 	background-color: #F5F5F5;
 	padding: 6vw;
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 }
 
 .specifications h2 {
@@ -255,6 +255,11 @@ nav ul li a {
 
 .specifications h4 {
 	margin-top: 2em;
+	margin-bottom: .5em;
+}
+
+#color-choice-text {
+	margin-bottom: 1em;
 }
 
 .color-choice {
