@@ -192,8 +192,6 @@ nav ul li a {
 
 /* --- STOL ------------------------------------------------------------- */
 .grid-container-stol {
-/*	margin: 0 10vw; 
-	padding: 0 20px;*/
 	display: grid;
 	grid-template-areas: 
 		'crumbs crumbs crumbs crumbs'
@@ -237,7 +235,7 @@ nav ul li a {
 
 .gallery-images img {
 	width: 45vw;
-	padding: 5px;
+	margin: 1vw;
 	
 }
 
@@ -269,7 +267,7 @@ nav ul li a {
 .color-choice img {
 	width: 19vw;
 	margin: 0 2vw 0 0;
-	border: 1px solid black;
+	border: 1px solid #002728;
 	
 }
 
@@ -308,8 +306,7 @@ nav ul li a {
 .other-items img {
 	display: inline-block;
 	width: 45vw;
-	padding: 5px;
-	margin-left: -5px;
+	margin: 1vw;
 }
 
 
@@ -487,7 +484,39 @@ footer p {
 
 /* style for tablet (portrait) and upwards */
 @media screen and (min-width: 768px) {
+	.grid-container-stol {
+		display: grid;
+		grid-template-areas: 
+			'crumbs crumbs'
+			'main-image main-image'
+			'g1 speci'
+			'g2 speci'
+			'g3 speci'
+			'g4 speci'
+			'other other'
+			'other-items other-items';
+	}
 	
+	.gallery-images {
+		width: 50vw;
+	}
+
+	.gallery-images img {
+		width: 50vw;
+		margin-left: 0;
+		margin-bottom: 0;
+	}
+
+	.specifications {
+		width: 50vw;
+		margin: 1vw 0 0 1vw;
+	}
+	
+	.color-choice img {
+		width: 15vw;
+		margin: 0 2vw 2vw 0;
+	}
+
 }
 
 
@@ -648,8 +677,7 @@ footer p {
 			'other-items other-items other-items other-items';
 	}
 	
-	.crumbs {
-		
+	.crumbs {	
 		margin: 0;
 	}
 
@@ -670,24 +698,41 @@ footer p {
 	
 	.main-image img {
 		width: 40vw;
-		padding: 0 10px 10px 0;
+		margin-right: 1vw;
 	}
 	
 	.gallery-images {
 		width: 40vw;
 		margin: 0;
-		text-align: left;
+		/*text-align: left;*/
 	}
 	
 	.gallery-images img {
 		width: 20vw;
-		padding: 5px;
-		margin-left: -5px;
+		margin: 0;
+		
+		/*padding: 0 -2vw -2vw 0;
+		margin: 0 .5vw .5vw 0;*/
 	}
+	
+	#gallery1, #gallery3 {
+		float: left;
+		padding-right: 5px;
+		padding-bottom: 10px;
+	}
+
+	#gallery2, #gallery4{
+		float: right;
+		padding-left: 5px;
+		padding-bottom: 10px;
+	}
+	
 	
 	.specifications {
 		width: 38vw;
 		padding: 40px 50px;
+		margin: 0;
+		margin-bottom: 10px;
 	}
 	
 	.color-choice {
@@ -722,14 +767,10 @@ footer p {
 	}
 	
 	.other-items img {
-		width: 20vw;
+		width: 19vw;
+		margin: 0;
+		padding: 0 1vw;
 	}
-	
-
-	
-	/*#other-tyngde {grid-area: tyngde;}
-	#other-poncho {grid-area: poncho;}
-	#other-kramme {grid-area: kramme;}*/
 	
 	
 	/* --- KONTAKT --------------------------------------------------------------------- */

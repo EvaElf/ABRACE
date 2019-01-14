@@ -80,23 +80,19 @@ function changeColor(colors) {
 	
 	//for tyngdetaepper.html
 	if (colors.id == "blue-blanket"){
-		showImg.src = "image/ABRACE-stol1-blue.jpg";
+		showImg.src = "image/ABRACE-stol2-blue.jpg";
 
-		gallery1.src = "image/ABRACE-stol2-blue.jpg";
-		gallery2.src = "image/ABRACE-stol3-blue.jpg";
-		gallery3.src = "image/ABRACE-stol4-blue.jpg";
-		gallery4.src = "image/ABRACE-stol5-blue.jpg";
+		gallery1.src = "image/tyngde2-blue.jpg";
+		gallery2.src = "image/tyngde3-blue.jpg";
 
 		colorChoice.innerText = "Blå, tekstil";
 	}
 	
 	if (colors.id == "gray-blanket"){
-		showImg.src = "image/ABRACE-stol1-gray.jpg";
+		showImg.src = "image/ABRACE-stol2-gray.jpg";
 
-		gallery1.src = "image/ABRACE-stol2-gray.jpg";
-		gallery2.src = "image/ABRACE-stol3-gray.jpg";
-		gallery3.src = "image/ABRACE-stol4-gray.jpg";
-		gallery4.src = "image/ABRACE-stol5-gray.jpg";
+		gallery1.src = "image/tyngde2-gray.jpg";
+		gallery2.src = "image/tyngde3-gray.jpg";
 
 		colorChoice.innerText = "Mørkgrå, tekstil";
 	}
