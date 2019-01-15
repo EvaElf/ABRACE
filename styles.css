@@ -102,14 +102,12 @@ nav ul li {
 nav ul li a {
 	text-decoration: none;
 	font-size: 20px;
-	font-family: 'Lato', sans-serif;
 	color: white;
 	margin: 20px;
 }
 
 .cart {
 	font-size: 2em;
-	font-family: 'Lato', sans-serif;
 	color: white;
 	margin: 0 40px;
 	padding: 0;
@@ -166,6 +164,7 @@ nav ul li a {
 	color: #606060;
 	text-align: center; 
 	position: relative;
+	z-index: -1;
 }
 
 .titel-firma h2 span {
@@ -189,8 +188,8 @@ nav ul li a {
 
 .tekst-om-firma {
 	grid-area: tekst-om-firma;
-	width: 100vw;
-	height: 40vh;
+	width: 90vw;
+	margin: 0 auto;
 }
 
 
@@ -1300,8 +1299,7 @@ footer p {
 	}
 
 	.tekst-om-firma {
-		width: 100vw;
-		height: 40vh;
+		width: 80vw;
 	}
 
 	.titel-firma h2 {
@@ -1315,7 +1313,7 @@ footer p {
 		background: #fff;
 		padding: 0px 20px;
 		position: relative;
-		z-index: 1;
+		z-index: -1;
 	}
 
 	.titel-firma h2:before {
@@ -2035,7 +2033,7 @@ footer p {
 	.logo img {
 	 	width: 100vw;
 		height: 10vh;
-		padding-top: 10px;
+		padding-top: 2vh;
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
@@ -2155,22 +2153,27 @@ footer p {
 		width: 35vw;
 		height: 50vh;
 		margin-top: -50vh;
-		margin-left: 8vw; 
+		margin-left: 10vw; 
 	}
 	
 	.citat p {
+		font-size: 1.2em;
+	}
+	
+	.citat p.tagline {
+		font-style: normal;
 		font-size: 1.5em;
 	}
 	
 	.banner img {
 		width: 100vw;
 		float: right;
-		padding-top: 15vh;
+		padding-top: 10vh;
 	}
+
 	
-	.tekst-om-firma {
+	.titel-firma {
 		width: 100vw;
-		height: 80vh;
 	}
 	
 	.titel-firma h2 {
@@ -2178,13 +2181,14 @@ footer p {
 		text-align: center; 
 		position: relative;
 		top: 2vh;
+		z-index: -1;
 	}
 
 	.titel-firma h2 span {
 		background: #fff;
 		padding: 0px 20px;
 		position: relative;
-		z-index: 1;
+
 	}
 
 	.titel-firma h2:before {
@@ -2193,10 +2197,17 @@ footer p {
 		display: block;
 		height: 0.3vh;
 		position: absolute;
-		top: 2.5vh;
+		top: 2vh;
 		width: 86vw;
 		left: 86px;
 	}
+	
+/*	.tekst-om-firma {
+		width: 80vw;
+		margin: 0 auto;
+		
+	}*/
+	
 	
 	/* --- PRODUKTER --------------------------------------------*/
 	.grid-container-kontakt {
@@ -2264,15 +2275,6 @@ footer p {
 		background-color: #144041;
 	}
 
-	.grid-container {
-		grid-template-areas:
-			'logo logo logo logo'
-			'nav nav nav nav'
-			'banner banner banner banner'
-			'citat citat citat citat'
-			'tekst-om-firma tekst-om-firma tekst-om-firma tekst-om-firma'
-			'foot foot foot foot';
-	}
 	
 	/* --- STOL ------------------------------------------------------------------------- */
 	.grid-container-stol {
