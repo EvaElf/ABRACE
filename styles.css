@@ -763,13 +763,15 @@ footer p {
 	}
 	
 	.other-items {
-		width: 80vw;
+		max-width: 80vw;
+		margin: 0;
+		padding: 0;
 	}
 	
 	.other-items img {
-		width: 19vw;
+		width: 19.5vw;
 		margin: 0;
-		padding: 0 1vw;
+		padding: 0;
 	}
 	
 	
