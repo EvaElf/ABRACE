@@ -190,6 +190,7 @@ nav ul li a {
 	left: 18px;
 }
 
+
 /* --- STOL ------------------------------------------------------------- */
 .grid-container-stol {
 	display: grid;
@@ -310,7 +311,770 @@ nav ul li a {
 }
 
 
-/* --- KONTAKT ------------------------------------------------------- */
+/* --- DOKUMENTATION ------------------------------------------------------- */
+
+
+.grid-container-dokumentation {
+	display: grid;
+	grid-template-areas: 
+		'logo logo logo'
+		'nav nav nav'
+		'banner banner banner'
+		'citat1 citat1 citat1'
+		'citat2 citat2 citat2'
+		'citat3 citat3 citat3'
+		'titel-dokumentation titel-dokumentation titel-dokumentation'
+		'tekst-til-dokumentation tekst-til-dokumentation tekst-til-dokumentation'
+		'titel-samarbejdspartnere titel-samarbejdspartnere titel-samarbejdspartnere'
+		 'samarbejdsparnere  samarbejdsparnere  samarbejdsparnere'
+		'foot foot foot'; 
+}
+
+
+.banner-dokumentation {
+	grid-area: banner;
+}
+
+.banner-dokumentation img {
+	width: 100vw;
+	height: auto;
+	padding-top: 10vh;
+}
+
+.citat1 {
+	grid-area: citat1;
+	width: 90vw;
+	height: auto;
+	margin-top: 4vh;
+	margin-left: 6vw;
+}
+
+.citat1 q {
+	font-size: 17px;
+	font-style: italic;
+	line-height: 1.5em;
+}
+
+.citat1 p {
+	font-size: 13px;
+	margin-top: 2vh;
+	margin-left: 43vw;
+}
+
+.citat2 {
+	grid-area: citat2;
+	width: 95vw;
+	height: auto;
+	margin-top: 4vh;
+	margin-left: 5vw;
+}
+
+.citat2 q {
+	font-size: 17px;
+	font-style: italic;
+	line-height: 1.5em;
+}
+
+.citat2 p {
+	font-size: 13px;
+	margin-top: 3vh;
+	margin-left: 15vw;
+}
+
+.citat3 {
+	grid-area: citat3;
+	width: 90vw;
+	height: auto;
+	margin-top: 4vh;
+	margin-left: 6vw;
+}
+
+.citat3 q {
+	font-size: 16px;
+	font-style: italic;
+	line-height: 1.5em;
+}
+
+.citat3 p {
+	font-size: 13px;
+	margin-top: 3vh;
+	margin-left: 3vw;
+}
+
+.titel-dokumentaion {
+	grid-area: titel-dokumentation;
+}
+
+.titel-dokumentaion h2 {
+	color: #606060;
+	text-align: center; 
+	position: relative;
+	z-index: -1;
+}
+
+.titel-dokumentaion h2 span {
+	background: #fff;
+	padding: 0px 20px;
+	position: relative;
+	z-index: 1;
+}
+
+.titel-dokumentaion h2:before {
+	background: #ddd;
+	content: "";
+	display: block;
+	height: 0.3vh;
+	position: absolute;
+	top: 2.5vh;
+	width: 90vw;
+	left: 5vw;
+}
+	
+
+.tekst-til-dokumentation {
+	grid-area: tekst-til-dokumentation;
+	display: grid;
+	width: 100vw;
+	height: auto;
+	grid-template-areas: 
+		'spalte1 spalte1 spalte1 spalte1'
+		'spalte2 spalte2 spalte2 spalte2'
+		'spalte3 spalte3 spalte3 spalte3';
+}
+
+.spalte1 {
+	grid-area: spalte1;
+	width: 100vw;
+	height: auto;
+}
+
+.spalte1 h3 {
+	margin-left: 5vw;
+}
+
+.spalte1 p {
+	margin-left: 5vw;
+}
+
+.spalte2 {
+	grid-area: spalte2;
+	width: 100vw;
+	height: auto;
+}
+
+.spalte2 h3 {
+	margin-left: 5vw;
+}
+
+.spalte2 p {
+	margin-left: 5vw;
+}
+
+.spalte3 {
+	grid-area: spalte3;
+	width: 100vw;
+	height: auto;
+}
+
+.spalte3 h3 {
+	margin-left: 5vw;
+}
+
+.spalte3 p {
+	margin-left: 5vw;
+}
+
+.spalte3 img {
+	width: 100vw;
+	height: auto;
+	margin-top: 5vh;
+}
+
+
+.titel-samarbejdspartnere {
+	 grid-area: titel-samarbejdspartnere;
+}
+
+.titel-samarbejdspartnere h2 {
+	color: #606060;
+	text-align: center; 
+	position: relative;
+	z-index: -1;
+}
+
+.titel-samarbejdspartnere h2 span {
+	background: #fff;
+	padding: 0px 20px;
+	position: relative;
+	z-index: 1;
+}
+
+.titel-samarbejdspartnere h2:before {
+	background: #ddd;
+	content: "";
+	display: block;
+	height: 0.3vh;
+	position: absolute;
+	top: 2.5vh;
+	width: 90vw;
+	left: 5vw;
+}
+
+.samarbejdspartnere {
+	grid-area: samarbejdsparnere;
+	font-size: 14px;
+	font-family: 'Lato', sans-serif;
+	width: 100vw;
+	height: auto;
+	display: grid;
+	grid-template-areas: 
+		'herning-psykiatri randers-psykiatri' 
+		'horsens-psykiatri lejbjergcentret' 
+		'marco-polo gug-geronto'
+		'attruphøj taleinstitut' 
+		'odense-psykiatri plejecenter'
+		'hjallerup-skole solkrogen' 'ringstedshave headspace'
+		'dronnig-ingrid-hospital seminarieskolen' 
+		'skovsgård-tranum-skole vester-mariensdal-skole';
+}
+
+.herning-psykiatri {
+	grid-area: herning-psykiatri;
+	width: 15vw;
+	height: auto;
+	margin-top: 2vh;
+	margin-left: 20vw;
+}
+
+.randers-psykiatri {
+	grid-area: randers-psykiatri;
+	width: 15vw;
+	height: auto;
+	margin-top: 2vh;
+	margin-left: 5vw;
+
+}
+
+.horsens-psykiatri {
+	grid-area: horsens-psykiatri;
+	width: 15vw;
+	height: auto;
+	margin-top: 5vh;
+	margin-left: 20vw;
+}
+
+.lejbjergcentret {
+	grid-area: lejbjergcentret;
+	width: 15vw;
+	height: auto;
+	margin-top: 2vh;
+	margin-left: 5vw;
+}
+
+.marco-polo {
+	grid-area: marco-polo;
+	width: 15vw;
+	height: auto;
+	margin-top: 2vh;
+	margin-left: 20vw;
+}
+
+.gug-geronto {
+	grid: gug-geronto;
+	width: 15vw;
+	height: auto;
+	margin-top: 2vh;
+	margin-left: 5vw;
+}
+
+.attruphoj {
+	grid-area: attruphøj;
+	width: 15vw;
+	height: auto;
+	margin-top: 2vh;
+	margin-left: 20vw;
+}
+
+.taleinstituttet {
+	grid-area: taleinstitut;
+	width: 15vw;
+	height: auto;
+	margin-top: 2vh;
+	margin-left: 5vw;
+}
+
+.odense-psykiatri {
+	grid-area: odense-psykiatri;
+	width: 15vw;
+	height: auto;
+	margin-top: 2vh;
+	margin-left: 20vw;
+}
+
+
+/* style for tablet (portrait) and upwards */
+@media screen and (min-width: 768px) {
+  /*--- STOL ------------------------------------------*/
+	.grid-container-stol {
+		display: grid;
+		grid-template-areas: 
+			'crumbs crumbs'
+			'main-image main-image'
+			'g1 speci'
+			'g2 speci'
+			'g3 speci'
+			'g4 speci'
+			'other other'
+			'other-items other-items';
+	}
+	
+	.gallery-images {
+		width: 50vw;
+	}
+
+	.gallery-images img {
+		width: 50vw;
+		margin-left: 0;
+		margin-bottom: 0;
+	}
+
+	.specifications {
+		width: 50vw;
+		margin: 1vw 0 0 1vw;
+	}
+	
+	.color-choice img {
+		width: 15vw;
+		margin: 0 2vw 2vw 0;
+	}
+
+/* ---- DOKUMENTATION --------------------------------------------*/
+.plejecenter-stoberiet {
+	grid-area: plejecenter;
+	width: 15vw;
+	height: auto;
+	margin-top: 2vh;
+	margin-left: 5vw;
+}
+
+.hjallerup-skole {
+	grid-area: hjallerup-skole;
+	width: 15vw;
+	height: auto;
+	margin-top: 2vh;
+	margin-left: 20vw;
+}
+
+
+.solkrogen {
+	grid-area: solkrogen;
+	width: 15vw;
+	height: auto;
+	margin-top: 2vh;
+	margin-left: 5vw;
+}
+
+
+/* style for tablet (landscape) and upwards */
+@media screen and (min-width: 1024px) {
+	.grid-container {
+		grid-template-areas:
+			'logo logo logo logo'
+			'nav nav nav nav'
+			'banner banner banner banner'
+			'citat citat citat citat'
+			'tekst-om-firma tekst-om-firma tekst-om-firma tekst-om-firma'
+			'foot foot foot foot';
+	}
+	
+	.logo {
+		width: 100vw;
+	}
+	
+	.logo img {
+	 	width: 100vw;
+		height: 10vh;
+		padding-top: 10px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	#menu-button, #menu-button-close, #menu-cart {
+		display: none;
+	}
+	
+	nav {
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 15vh;
+		transform: translateX(0);
+		transition: none;
+		background-color: transparent;
+		opacity: 1;
+		padding-top: 10vh;
+	}
+	
+	nav ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0 10vw;
+		overflow: hidden;
+		background-color: #002728;
+		width: 100vw;
+	}
+
+  /* --- DOKUMENTATION ---------------------------------------------*/
+.ringstedshave {
+	grid-area: ringstedshave;
+	width: 15vw;
+	height: auto;
+	margin-top: 2vh;
+	margin-left: 20vw;
+}
+
+
+.headspace {
+	grid-area: headspace;
+	width: 15vw;
+	height: auto;
+	margin-top: 2vh;
+	margin-left: 5vw;
+}
+
+.dronning-ingrid-hospital {
+	grid-area: dronnig-ingrid-hospital;
+	width: 15vw;
+	height: auto;
+	margin-top: 2vh;
+	margin-left: 20vw;
+}
+
+.seminarieskolen {
+	grid-area: seminarieskolen;
+	width: 15vw;
+	height: auto;
+	margin-top: 2vh;
+	margin-left: 5vw;
+}
+
+.skovsgard-tranum-skole {
+	grid-area: skovsgård-tranum-skole;
+	width: 15vw;
+	height: auto;
+	margin-top: 2vh;
+	margin-left: 20vw;
+}
+
+.vester-mariendal-skole {
+	grid-area: vester-mariensdal-skole;
+	width: 15vw;
+	height: auto;
+	margin-top: 2vh;
+	margin-left: 5vw;
+}
+
+.herning-psykiatri img {
+	width: auto;
+	height: 5vh;
+}
+
+.randers-psykiatri img {
+	width: auto;
+	height: 5vh;
+}
+
+.horsens-psykiatri img {
+	width: auto;
+	height: 5vh;
+}
+
+.lejbjergcentret img {
+	width: auto;
+	height: 4.5vh;
+}
+
+.marco-polo img{
+	width: auto;
+	height: 4.5vh;
+}
+
+.gug-geronto img {
+	width: auto;
+	height: 4.5vh;
+}
+
+.attruphoj img {
+	width: auto;
+	height: 5vh;
+}
+
+.taleinstituttet img {
+	width: auto;
+	height: 4.5vh;
+}
+
+.odense-psykiatri img {
+	width: auto;
+	height: 6vh;
+}
+
+.plejecenter-stoberiet img {
+	width: auto;
+	height: 5vh;
+}
+
+.hjallerup-skole img {
+	width: auto;
+	height: 5vh;
+}
+
+.solkrogen img {
+	width: auto;
+	height: 5vh;
+}
+
+.ringstedshave img {
+	width: auto;
+	height: 5vh;
+}
+
+.headspace img {
+	width: auto;
+	height: 5vh;
+}
+
+.dronning-ingrid-hospital img {
+	width: auto;
+	height: 5vh;
+}
+
+.seminarieskolen img {
+	width: auto;
+	height: 8vh;
+}
+
+.skovsgard-tranum-skole img {
+	width: auto;
+	height: 12vh;
+}
+
+.vester-mariendal-skole img {
+	width: auto;
+	height: 8vh;
+}
+
+
+
+/* --- OM OS ------------------------------------------------------- */
+
+.grid-container-om-os {
+	display: grid;
+	grid-template-areas: 
+		'logo logo logo'
+		'nav nav nav'
+		'kristine kristine kristine' 
+		'maya maya maya' 
+		'lasse lasse lasse'
+		'vision-mission vision-mission  vision-mission' 
+		'titel-historie titel-historie titel-historie'
+		'tekst-til-historie tekst-til-historie tekst-til-historie'
+		'foot foot foot';
+}
+
+.kristine {
+	grid-area: kristine;
+	margin-top: 20vh;
+}
+
+.kristine img {
+	width: auto;
+	height: 40vh;
+	margin-left: 15vw;
+}
+
+.kristine h2 {
+	color: #606060;
+	margin-left: 25vw;
+}
+
+.kristine p {
+	color: #D6A900;
+	font-size: 18px;
+	margin-left: 37vw;
+}
+
+.maya {
+	grid-area: maya;
+	margin-top: 5vh;
+}
+
+.maya img {
+	width: auto;
+	height: 40vh;
+	margin-left: 15vw;
+}
+
+.maya h2 {
+	color: #606060;
+	margin-left: 30vw;
+}
+.maya p {
+	color: #D6A900;
+	font-size: 18px;
+	margin-left: 38vw;
+}
+
+.lasse {
+	grid-area: lasse;
+	margin-top: 5vh;
+}
+
+.lasse img {
+	width: auto;
+	height: 40vh;
+
+
+	margin-left: 15vw;
+}
+
+.lasse h2 {
+	color: #606060;
+	margin-left: 30vw;
+}
+.lasse p {
+	color: #D6A900;
+	font-size: 18px;
+	margin-left: 44vw;
+	margin-bottom: 8vh;
+}
+
+.vision-mission {
+	grid-area: vision-mission;
+	display: grid;
+	width: 100vw;
+	height: auto;
+	grid-template-areas: 
+		'vision vision'
+		'mission mission';
+}
+
+.vision {
+	grid-area: vision;
+	background-color: #ddd;
+	width: 100vw;
+	height: auto;
+}
+
+.vision h2 {
+	margin-left: 10vw;
+}
+
+.vision p {
+	font-size: 16px;
+	line-height: 1.3em;
+	margin-left: 10vw;
+	margin-right: 10vw;
+}
+
+.mission {
+	grid-area: mission;
+	background-color: #ddd;
+	width: 100vw;
+	height: auto;
+}
+
+.mission h2 {
+	margin-left: 10vw;
+}
+
+.mission p {
+	font-size: 16px;
+	line-height: 1.3em;
+	margin-left: 10vw;
+	margin-right: 10vw;
+}
+
+.titel-historie {
+	grid-area: titel-historie;
+}
+
+.titel-historie h2 {
+	color: #606060;
+	text-align: center; 
+	position: relative;
+	z-index: -1;
+	top: 2vh;
+}
+
+.titel-historie h2 span {
+	background: #fff;
+	padding: 0px 20px;
+	position: relative;
+	z-index: 1;
+}
+
+.titel-historie h2:before {
+	background: #ddd;
+	content: "";
+	display: block;
+	height: 0.3vh;
+	position: absolute;
+	top: 2.5vh;
+	width: 90vw;
+	left: 5vw;
+}
+
+.tekst-til-historie {
+	grid-area: tekst-til-historie;
+	display: grid;
+	width: 100vw;
+	height: auto;
+	grid-template-areas: 
+		'kolonne1 kolonne1 kolonne1'
+		'kolonne2 kolonne2 kolonne2'
+		'kolonne3 kolonne3 kolonne3'
+}
+
+.kolonne1 {
+	grid-area: kolonne1;
+	width: 90vw;
+	height: auto;
+	margin-left: 5vw;
+}
+
+.kolonne1 h3, p {
+	line-height: 1.3em;
+	font-family: 'Lato', sans-serif;
+}
+
+.kolonne2 {
+	grid-area: kolonne2;
+	width: 90vw;
+	height: auto;
+	margin-left: 5vw;
+}
+
+.kolonne2 h3, p {
+	line-height: 1.3em;
+	font-family: 'Lato', sans-serif;
+}
+
+.kolonne3 {
+	grid-area: kolonne3;
+	width: 90vw;
+	height: auto;
+	margin-left: 5vw;
+}
+
+.kolonne3 h3, p {
+	line-height: 1.3em;
+	font-family: 'Lato', sans-serif;
+}
+
+
+/* --- KONTAKT ---------------------------------------------- */
 
 .grid-container-kontakt {
 	display: grid;
@@ -466,7 +1230,7 @@ input[type=submit] {
 	font-family: 'Lato', sans-serif;
 }
 
-/* --- FOOTER --- */
+/* --- FOOTER ---------------------------------------------- */
 
 footer {
 	grid-area: foot;
@@ -484,39 +1248,667 @@ footer p {
 
 /* style for tablet (portrait) and upwards */
 @media screen and (min-width: 768px) {
-	.grid-container-stol {
-		display: grid;
+	.grid-container {
 		grid-template-areas: 
-			'crumbs crumbs'
-			'main-image main-image'
-			'g1 speci'
-			'g2 speci'
-			'g3 speci'
-			'g4 speci'
-			'other other'
-			'other-items other-items';
-	}
-	
-	.gallery-images {
-		width: 50vw;
+			'banner banner banner banner'
+			'citat citat citat citat'
+			'tekst-om-firma tekst-om-firma tekst-om-firma tekst-om-firma'
+			'foot foot foot foot';	
 	}
 
-	.gallery-images img {
-		width: 50vw;
-		margin-left: 0;
-		margin-bottom: 0;
+	.citat {
+		width: 35vw;
+		height: auto;
+		margin-top: -22vh;
+		margin-left: 8vw; 
 	}
 
-	.specifications {
-		width: 50vw;
-		margin: 1vw 0 0 1vw;
+	.citat p {
+		color: #606060;
+		font-size: 1.2em;
+		font-family: 'Lato', sans-serif;
+		font-style: italic;
+		line-height: 1.5em;
+	}
+
+	.citationstegn {
+		color: #D6A900;
+		font-size: 1.5em;
+	}
+
+	.banner img { 
+		width: 100vw;
+		height: auto;
+		padding-top: 10vh;
+	}
+
+	.tekst-om-firma {
+		width: 100vw;
+		height: 40vh;
+	}
+
+	.tekst-om-firma h2 {
+		color: #606060;
+		text-align: center; 
+		position: relative;
+		top: 2vh;
+	}
+
+	.tekst-om-firma h2 span {
+		background: #fff;
+		padding: 0px 20px;
+		position: relative;
+		z-index: 1;
+	}
+
+	.tekst-om-firma h2:before {
+		background: #ddd;
+		content: "";
+		display: block;
+		height: 0.3vh;
+		position: absolute;
+		top: 1.5vh;
+		width: 90vw;
+		left: 18px;
 	}
 	
-	.color-choice img {
+/* ---- DOKUMENTATION ---------------------------------*/	
+	.grid-container-dokumentation {
+		grid-template-areas: 
+			'logo logo logo'
+			'nav nav nav'
+			'banner banner banner'
+			'citat1 citat2 citat3'
+			'titel-dokumentation titel-dokumentation titel-dokumentation'
+			'tekst-til-dokumentation tekst-til-dokumentation tekst-til-dokumentation'
+			'titel-samarbejdspartnere titel-samarbejdspartnere titel-samarbejdspartnere'
+			'samarbejdsparnere  samarbejdsparnere  samarbejdsparnere'
+			'foot foot foot';
+	}
+	
+	.banner-dokumentation img {
+		width: 100vw;
+		height: auto;
+	}
+	
+	.citat1 {
+		width: 26vw;
+		height: auto;
+		margin-left: 6vw;
+	}
+	
+	.citat1 q {
+		font-size: 18px;
+		line-height: 1.5em;
+		font-style: italic;
+	}
+	
+	.citat1 p {
+		margin-top: 4vh;
+		line-height: 1.5em;
+		margin-left: 2vw; 
+		font-size: 14px;
+	}
+	
+	.citat2 {
+		width: 25vw;
+		height: auto;
+	}
+	
+	.citat2 q {
+		font-size: 18px;
+		line-height: 1.5em;
+		font-style: italic;
+	}
+	
+	.citat2 p {
+		font-size: 14px;
+		line-height: 1.3em;
+		margin-left: 1vw; 
+		margin-top: 4vh;
+	}
+
+	.citat3 {
+		width: 24vw;
+		height: auto;
+	}
+	
+	.citat3 q {
+		font-size: 18px;
+		line-height: 1.5em;
+		font-style: italic;
+	}
+	
+	.citat3 p {
+		font-size: 14px;
+		line-height: 1.5em;
+		margin-top: 4vh;
+		margin-left: 1vw; 
+	}
+	
+	.titel-dokumentaion h2 {
+		color: #606060;
+		text-align: center; 
+		position: relative;
+		z-index: -1;
+	}
+
+	.titel-dokumentaion h2 span {
+		background: #fff;
+		padding: 0px 20px;
+		position: relative;
+		z-index: 1;
+	}
+
+	.titel-dokumentaion h2:before {
+		background: #ddd;
+		content: "";
+		display: block;
+		height: 0.3vh;
+		position: absolute;
+		top: 1.5vh;
+		width: 90vw;
+		left: 5vw;
+	}
+	
+	.tekst-til-dokumentation {
+		display: grid;
+		width: 100vw;
+		height: auto;
+		grid-template-areas: 
+			'spalte1 spalte1 spalte2 spalte2'
+			'spalte1 spalte1 spalte3 spalte3';
+	}
+
+	.spalte1 {
+		width: 50vw;
+		height: auto;
+	}
+
+	.spalte1 h3 {
+		margin-left: 5vw;
+		margin-bottom: -1vh;
+	}
+
+	.spalte1 p {
+		margin-left: 5vw;
+		line-height: 1.3em;
+	}
+
+	.spalte2 {
+		width: 50vw;
+		height: auto;
+	}
+
+	.spalte2 h3 {
+		margin-left: 5vw;
+		margin-bottom: -1vh;
+	}
+
+	.spalte2 p {
+		margin-left: 5vw;
+		line-height: 1.3em;
+	}
+
+	.spalte3 {
+		width: 50vw;
+		height: auto;
+	}
+
+	.spalte3 h3 {
+		margin-left: 5vw;
+		margin-bottom: -1vh;
+	}
+
+	.spalte3 p {
+		margin-left: 5vw;
+		line-height: 1.3em;
+	}
+
+	.spalte3 img {
+		width: 50vw;
+		height: auto;
+	}
+	
+	.titel-samarbejdspartnere h2 {
+		color: #606060;
+		text-align: center; 
+		position: relative;
+		z-index: -1;
+	}
+
+	.titel-samarbejdspartnere h2 span {
+		background: #fff;
+		padding: 0px 20px;
+		position: relative;
+		z-index: 1;
+	}
+
+	.titel-samarbejdspartnere h2:before {
+		background: #ddd;
+		content: "";
+		display: block;
+		height: 0.3vh;
+		position: absolute;
+		top: 1.5vh;
+		width: 90vw;
+		left: 5vw;
+	}
+	
+	.samarbejdspartnere {
+		grid-template-areas: 
+			'herning-psykiatri randers-psykiatri horsens-psykiatri' 'lejbjergcentret marco-polo gug-geronto'
+			'attruphøj taleinstitut odense-psykiatri'
+			'plejecenter hjallerup-skole solkrogen'
+			'ringstedshave headspace dronnig-ingrid-hospital'
+			'seminarieskolen skovsgård-tranum-skole vester-mariensdal-skole';
+	}
+	
+	.herning-psykiatri {
 		width: 15vw;
-		margin: 0 2vw 2vw 0;
+		height: auto;
+		margin-top: 5vh;
+		margin-left: 10vw;
 	}
 
+	.randers-psykiatri {
+		width: 15vw;
+		height: auto;
+		margin-top: 5vh;
+		margin-left: 10vw;
+	}
+
+	.horsens-psykiatri {
+		width: 15vw;
+		height: auto;
+		margin-top: 5vh;
+		margin-left: 5vw;
+	}
+
+	.lejbjergcentret {
+		width: 15vw;
+		height: auto;
+		margin-top: 5vh;
+		margin-left: 10vw;
+	}
+
+	.marco-polo {
+		width: 15vw;
+		height: auto;
+		margin-top: 5vh;
+		margin-left: 10vw;
+	}
+
+	.gug-geronto {
+		width: 15vw;
+		height: auto;
+		margin-top: 5vh;
+		margin-left: 5vw;
+	}
+
+	.attruphoj {
+		width: 15vw;
+		height: auto;
+		margin-top: 5vh;
+		margin-left: 10vw;
+	}
+
+	.taleinstituttet {
+		width: 15vw;
+		height: auto;
+		margin-top: 5vh;
+		margin-left: 10vw;
+	}
+
+	.odense-psykiatri {
+		width: 15vw;
+		height: auto;
+		margin-top: 5vh;
+		margin-left: 5vw;
+	}
+
+	.plejecenter-stoberiet {
+		width: 15vw;
+		height: auto;
+		margin-top: 5vh;
+		margin-left: 10vw;
+	}
+
+	.hjallerup-skole {
+		width: 15vw;
+		height: auto;
+		margin-top: 5vh;
+		margin-left: 10vw;
+	}
+
+	.solkrogen {
+		width: 15vw;
+		height: auto;
+		margin-top: 5vh;
+		margin-left: 10vw;
+	}
+
+	.ringstedshave {
+		width: 15vw;
+		height: auto;
+		margin-top: 5vh;
+		margin-left: 5vw;
+	}
+
+	.headspace {
+		width: 15vw;
+		height: auto;
+		margin-top: 5vh;
+		margin-left: 10vw;
+	}
+
+	.dronning-ingrid-hospital {
+		width: 15vw;
+		height: auto;
+		margin-top: 5vh;
+		margin-left: 5vw;
+	}
+
+	.seminarieskolen {
+		width: 15vw;
+		height: auto;
+		margin-top: 5vh;
+		margin-left: 10vw;
+	}
+
+	.skovsgard-tranum-skole {
+		width: 15vw;
+		height: auto;
+		margin-top: 5vh;
+		margin-left: 10vw;
+	}
+
+	.vester-mariendal-skole {
+		width: 15vw;
+		height: auto;
+		margin-top: 5vh;
+		margin-left: 5vw;
+	}
+
+	
+	.herning-psykiatri img {
+		width: auto;
+		height: 5vh;
+	}
+	
+	.randers-psykiatri img {
+		width: auto;
+		height: 5vh;
+	}
+	
+	.horsens-psykiatri img {
+		width: auto;
+		height: 5vh;
+	}
+	
+	.lejbjergcentret img {
+		width: auto;
+		height: 5vh;
+	}
+	
+	.marco-polo img{
+		width: auto;
+		height: 5vh;
+	}
+	
+	.gug-geronto img {
+		width: auto;
+		height: 5vh;
+	}
+
+	.attruphoj img {
+		width: auto;
+		height: 5vh;
+	}
+
+	.taleinstituttet img {
+		width: auto;
+		height: 5vh;
+	}
+
+	.odense-psykiatri img {
+		width: auto;
+		height: 7vh;
+	}
+	
+	.plejecenter-stoberiet img {
+		width: auto;
+		height: 5vh;
+	}
+
+	.hjallerup-skole img {
+		width: auto;
+		height: 5vh;
+	}
+
+	.solkrogen img {
+		width: auto;
+		height: 5vh;
+	}
+
+	.ringstedshave img {
+		width: auto;
+		height: 5vh;
+	}
+
+	.headspace img {
+		width: auto;
+		height: 5vh;
+	}
+
+	.dronning-ingrid-hospital img {
+		width: auto;
+		height: 5vh;
+	}
+
+	.seminarieskolen img {
+		width: auto;
+		height: 7vh;
+	}
+
+	.skovsgard-tranum-skole img {
+		width: auto;
+		height: 10vh;
+	}
+
+	.vester-mariendal-skole img {
+		width: auto;
+		height: 8vh;
+	}
+
+	/* --- OM OS ------------------------------------------------------------------------- */
+	.grid-container-om-os {
+		grid-template-areas: 
+			'logo logo logo'
+			'nav nav nav'
+			'kristine maya lasse'
+			'vision-mission vision-mission vision-mission' 
+			'titel-historie titel-historie titel-historie'
+			'tekst-til-historie tekst-til-historie tekst-til-historie'
+			'foot foot foot';
+	}
+
+	.kristine {
+		margin-top: 20vh;
+	}
+
+	.kristine img {
+		width: auto;
+		height: 20vh;
+		margin-left: 5vw;
+	}
+
+	.kristine h2 {
+		color: #606060;
+		margin-left: 7vw;
+	}
+
+	.kristine p {
+		color: #D6A900;
+		font-size: 18px;
+		margin-left: 13vw;
+	}
+
+	.maya {
+		margin-top: 5vh;
+	}
+
+	.maya img {
+		width: auto;
+		height: 20vh;
+		margin-top: 15vh;
+		margin-left: 1vw;
+	}
+
+	.maya h2 {
+		color: #606060;
+		margin-left: 5vw;
+	}
+	.maya p {
+		color: #D6A900;
+		font-size: 18px;
+		margin-left: 9vw;
+	}
+
+	.lasse {
+		margin-top: 5vh;
+	}
+
+	.lasse img {
+		width: auto;
+		height: 20vh;
+		margin-top: 15vh;
+		margin-left: 1vw;
+	}
+
+	.lasse h2 {
+		color: #606060;
+		margin-left: 5vw;
+	}
+
+	.lasse p {
+		color: #D6A900;
+		font-size: 18px;
+		margin-left: 12vw;
+		margin-bottom: 5vh;
+	}
+
+	.vision-mission {
+		display: grid;
+		width: 100vw;
+		height: auto;
+		grid-template-areas: 
+			'vision mission';
+	}
+
+	.vision {
+		background-color: #ddd;
+		width: 50vw;
+		height: auto;
+	}
+
+	.vision h2 {
+		margin-left: 10vw;
+	}
+
+	.vision p {
+		font-size: 16px;
+		line-height: 1.3em;
+		margin-left: 10vw;
+		margin-right: 10vw;
+	}
+
+	.mission {
+		background-color: #ddd;
+		width: 50vw;
+		height: auto;
+	}
+
+	.mission h2 {
+		margin-left: 10vw;
+	}
+
+	.mission p {
+		font-size: 16px;
+		line-height: 1.3em;
+		margin-left: 10vw;
+		margin-right: 10vw;
+	}
+
+	.titel-historie h2 {
+		color: #606060;
+		text-align: center; 
+		position: relative;
+		z-index: -1;
+	}
+
+	.titel-historie h2 span {
+		background: #fff;
+		padding: 0px 20px;
+		position: relative;
+		z-index: 1;
+	}
+
+	.titel-historie h2:before {
+		background: #ddd;
+		content: "";
+		display: block;
+		height: 0.3vh;
+		position: absolute;
+		top: 1.5vh;
+		width: 90vw;
+		left: 5vw;
+	}
+
+	.tekst-til-historie {
+		grid-area: tekst-til-historie;
+		display: grid;
+		width: 100vw;
+		height: auto;
+		grid-template-areas: 
+			'kolonne1 kolonne1 kolonne1'
+			'kolonne2 kolonne2 kolonne2'
+			'kolonne3 kolonne3 kolonne3';
+	}
+
+	.kolonne1 {
+		width: 90vw;
+		height: auto;
+		margin-left: 5vw;
+	}
+
+	.kolonne1 h3, p {
+		line-height: 1.3em;
+		font-family: 'Lato', sans-serif;
+	}
+
+	.kolonne2 {
+		width: 90vw;
+		height: auto;
+		margin-left: 5vw;
+	}
+
+	.kolonne2 h3, p {
+		line-height: 1.3em;
+		font-family: 'Lato', sans-serif;
+	}
+
+	.kolonne3 {
+		grid-area: kolonne3;
+		width: 90vw;
+		height: auto;
+		margin-left: 5vw;
+	}
+
+	.kolonne3 h3, p {
+		line-height: 1.3em;
+		font-family: 'Lato', sans-serif;
+	}
 }
 
 
@@ -555,7 +1947,6 @@ footer p {
 		position: fixed;
 		top: 0;
 		left: 0;
-		height: 15vh;
 		transform: translateX(0);
 		transition: none;
 		background-color: transparent;
@@ -663,6 +2054,601 @@ footer p {
 		left: 86px;
 	}
 	
+	
+	/* --- DOKUMENTATION ------------------------------------------------------------------------- */
+	.grid-container-dokumentation {
+		grid-template-areas: 
+			'logo logo logo'
+			'nav nav nav'
+			'banner banner banner'
+			'citat1 citat2 citat3'
+			'titel-dokumentation titel-dokumentation titel-dokumentation'
+			'tekst-til-dokumentation tekst-til-dokumentation tekst-til-dokumentation'
+			'titel-samarbejdspartnere titel-samarbejdspartnere titel-samarbejdspartnere'
+			'samarbejdsparnere  samarbejdsparnere  samarbejdsparnere'
+			'foot foot foot';
+	}
+	
+	.banner-dokumentation img {
+		width: 100vw;
+		height: auto;
+	}
+	
+	.citat1 {
+		width: 25vw;
+		height: 30vh;
+		margin-left: 8vw;
+	}
+	
+	.citat1 q {
+		font-size: 20px;
+		line-height: 1.5em;
+		font-style: italic;
+	}
+	
+	.citat1 p {
+		margin-top: 4vh;
+		margin-left: 8vw; 
+		font-size: 14px;
+	}
+	
+	.citat2 {
+		width: 25vw;
+		height: 30vh;
+		margin-left: -4vw;
+	}
+	
+	.citat2 q {
+		font-size: 20px;
+		line-height: 1.5em;
+		font-style: italic;
+	}
+	
+	.citat2 p {
+		font-size: 14px;
+		margin-left: 0vw; 
+		margin-top: 4vh;
+	}
+
+	.citat3 {
+		width: 25vw;
+		height: 30vh;
+		margin-left: -1vw;
+	}
+	
+	.citat3 q {
+		font-size: 20px;
+		line-height: 1.5em;
+		font-style: italic;
+	}
+	
+	.citat3 p {
+		font-size: 14px;
+		margin-top: 4vh;
+		margin-left: -3.9vw; 
+	}
+	
+	.titel-dokumentaion h2 {
+		color: #606060;
+		text-align: center; 
+		position: relative;
+		z-index: -1;
+	}
+
+	.titel-dokumentaion h2 span {
+		background: #fff;
+		padding: 0px 20px;
+		position: relative;
+		z-index: 1;
+	}
+
+	.titel-dokumentaion h2:before {
+		background: #ddd;
+		content: "";
+		display: block;
+		height: 0.3vh;
+		position: absolute;
+		top: 2.5vh;
+		width: 90vw;
+		left: 5vw;
+	}
+	
+	.titel-samarbejdspartnere h2 {
+		color: #606060;
+		text-align: center; 
+		position: relative;
+		z-index: -1;
+	}
+
+	.titel-samarbejdspartnere h2 span {
+		background: #fff;
+		padding: 0px 20px;
+		position: relative;
+		z-index: 1;
+	}
+
+	.titel-samarbejdspartnere h2:before {
+		background: #ddd;
+		content: "";
+		display: block;
+		height: 0.3vh;
+		position: absolute;
+		top: 2.5vh;
+		width: 90vw;
+		left: 5vw;
+	}
+	
+	.tekst-til-dokumentation {
+		width: 100vw;
+		height: auto;
+		grid-template-areas: 
+			'spalte1 spalte2 spalte3';
+	}
+
+	.spalte1 {
+		width: 25vw;
+		height: auto;
+		margin-left: 6vw;
+		margin-top: 2vh;
+	}
+	
+	.spalte1 h3 {
+		line-height: 1.3em;
+		font-family: 'Lato', sans-serif;
+		margin-bottom: -1.5vh;
+	}
+	
+	.spalte1 p {
+		line-height: 1.3em;
+		font-family: 'Lato', sans-serif;
+	}
+	
+	.spalte2 {
+		width: 25vw;
+		height: auto;
+		margin-top: 2vh;
+		margin-left: -6vw;
+	}
+	
+	.spalte2 h3 {
+		font-family: 'Lato', sans-serif;
+		margin-bottom: -1.5vh;
+	}
+	
+	.spalte2 p {
+		line-height: 1.3em;
+		font-family: 'Lato', sans-serif;
+	}
+	
+	.spalte2 a {
+		color: #D6A900;
+		line-height: 1.5em;
+	}
+	
+	.citat-fagperson{
+		font-style: italic;
+		font-size: 15px;
+		line-height: 2em;
+		font-family: 'Lato', sans-serif;
+	}
+	
+	.citat-fagperson em {
+		color: #D6A900;
+		font-size: 20px;
+	}
+
+	.spalte3 {
+		width: 25vw;
+		height: auto;
+		margin-top: 2vh;
+		margin-left: -8vw;
+	}
+	
+	.spalte3 h3 {
+		line-height: 1.3em;
+		font-family: 'Lato', sans-serif;
+		margin-bottom: -1.5vh;
+	}
+	
+	.spalte3 p {
+		line-height: 1.3em;
+		font-family: 'Lato', sans-serif;
+	}
+	
+	.spalte3 img {
+		width: 50vw;
+		height: auto;
+		margin-top: 0vh;
+		margin-left: -20vw;
+	}
+	
+
+	.samarbejdspartnere {
+		grid-template-areas: 
+			'herning-psykiatri randers-psykiatri horsens-psykiatri lejbjergcentret marco-polo gug-geronto'
+			'attruphøj taleinstitut odense-psykiatri plejecenter hjallerup-skole solkrogen'
+			'ringstedshave headspace dronnig-ingrid-hospital seminarieskolen skovsgård-tranum-skole vester-mariensdal-skole';
+	}
+	
+	.herning-psykiatri {
+		width: 10vw;
+		height: auto;
+		margin-top: 5vh;
+		margin-left: 4.5vw;
+	}
+
+	.randers-psykiatri {
+		width: 10vw;
+		height: auto;
+		margin-top: 5vh;
+		margin-left: 1.5vw;
+	}
+
+	.horsens-psykiatri {
+		width: 10vw;
+		height: auto;
+		margin-top: 5vh;
+		margin-left: 1.5vw;
+	}
+
+	.lejbjergcentret {
+		width: 10vw;
+		height: auto;
+		margin-top: 5vh;
+		margin-left: 1.5vw;
+	}
+
+	.marco-polo {
+		width: 10vw;
+		height: auto;
+		margin-top: 5vh;
+		margin-left: 1.5vw;
+	}
+
+	.gug-geronto {
+		width: 10vw;
+		height: auto;
+		margin-top: 5vh;
+		margin-left: 1.5vw;
+	}
+
+	.attruphoj {
+		width: 10vw;
+		height: auto;
+		margin-top: 5vh;
+		margin-left: 4.5vw;
+	}
+
+	.taleinstituttet {
+		width: 10vw;
+		height: auto;
+		margin-top: 5vh;
+		margin-left: 1.5vw;
+	}
+
+	.odense-psykiatri {
+		width: 10vw;
+		height: auto;
+		margin-top: 5vh;
+		margin-left: 1.5vw;
+	}
+
+	.plejecenter-stoberiet {
+		width: 10vw;
+		height: auto;
+		margin-top: 5vh;
+		margin-left: 1.5vw;
+	}
+
+	.hjallerup-skole {
+		width: 10vw;
+		height: auto;
+		margin-top: 5vh;
+		margin-left: 1.5vw;
+	}
+
+	.solkrogen {
+		width: 10vw;
+		height: auto;
+		margin-top: 5vh;
+		margin-left: 1.5vw;
+	}
+
+	.ringstedshave {
+		width: 10vw;
+		height: auto;
+		margin-top: 5vh;
+		margin-left: 4.5vw;
+	}
+
+	.headspace {
+		width: 10vw;
+		height: auto;
+		margin-top: 5vh;
+		margin-left: 1.5vw;
+	}
+
+	.dronning-ingrid-hospital {
+		width: 10vw;
+		height: auto;
+		margin-top: 5vh;
+		margin-left: 1.5vw;
+	}
+
+	.seminarieskolen {
+		width: 8vw;
+		height: auto;
+		margin-top: 5vh;
+		margin-left: 1.5vw;
+	}
+
+	.skovsgard-tranum-skole {
+		width: 10vw;
+		height: auto;
+		margin-top: 5vh;
+		margin-left: 1.5vw;
+	}
+
+	.vester-mariendal-skole {
+		width: 10vw;
+		height: auto;
+		margin-top: 5vh;
+		margin-left: 1.5vw;
+	}
+
+	.herning-psykiatri img {
+		width: auto;
+		height: 8vh;
+	}
+	
+	.randers-psykiatri img {
+		width: auto;
+		height: 8vh;
+	}
+	
+	.horsens-psykiatri img {
+		width: auto;
+		height: 8vh;
+	}
+	
+	.lejbjergcentret img {
+		width: auto;
+		height: 7vh;
+	}
+	
+	.marco-polo img{
+		width: auto;
+		height: 7vh;
+	}
+	
+	.gug-geronto img {
+		width: auto;
+		height: 7vh;
+	}
+
+	.attruphoj img {
+		width: auto;
+		height: 7vh;
+	}
+
+	.taleinstituttet img {
+		width: auto;
+		height: 7vh;
+	}
+
+	.odense-psykiatri img {
+		width: auto;
+		height: 8vh;
+	}
+
+	.plejecenter-stoberiet img {
+		width: auto;
+		height: 7vh;
+	}
+
+	.hjallerup-skole img {
+		width: auto;
+		height: 7vh;
+	}
+
+	.solkrogen img {
+		width: auto;
+		height: 7vh;
+	}
+
+	.ringstedshave img {
+		width: auto;
+		height: 7vh;
+	}
+
+	.headspace img {
+		width: auto;
+		height: 7vh;
+	}
+
+	.dronning-ingrid-hospital img {
+		width: auto;
+		height: 7vh;
+	}
+
+	.seminarieskolen img {
+		width: auto;
+		height: 10vh;
+	}
+
+	.skovsgard-tranum-skole img {
+		width: auto;
+		height: 15vh;
+	}
+
+	.vester-mariendal-skole img {
+		width: 10vw;
+		height: 12vh;
+	}
+	
+	/* --- OM OS --------------------------------------------------------------------- */
+	.grid-container-om-os {
+		grid-template-areas: 
+			'logo logo logo'
+			'nav nav nav'
+			'kristine maya lasse'
+			'vision-mission vision-mission vision-mission' 
+			'titel-historie titel-historie titel-historie'
+			'tekst-til-historie tekst-til-historie tekst-til-historie'
+			'foot foot foot';
+	}
+	
+	.kristine {
+		margin-top: 25vh;
+	}
+	
+	.kristine img {
+		width: auto;
+		height: 45vh;
+		margin-top: 5vh;
+		margin-left: 10vw;
+	}
+	
+	.kristine h2 {
+		color: #606060;
+		margin-left: 13vw;
+	}
+	
+	.kristine p {
+		color: #D6A900;
+		font-size: 16.5px;
+		font-family: 'Lato', sans-serif;
+		margin-left: 16vw;
+		margin-bottom: 10vh;
+	}
+	
+	.maya {
+		margin-top: 25vh;
+	}
+	
+	.maya img {
+		width: auto;
+		height: 45vh;
+		margin-top: 5vh;
+	}
+	
+	.maya h2 {
+		color: #606060;
+		margin-left: 5vw;
+	}
+	
+	.maya p {
+		color: #D6A900;
+		font-size: 16.5px;
+		font-family: 'Lato', sans-serif;
+		margin-left: 7.5vw;
+		margin-bottom: 10vh;
+	}
+	
+	.lasse {
+		margin-top: 25vh;
+	}
+	
+	.lasse img {
+		width: auto;
+		height: 45vh;
+		margin-top: 5vh;
+	}
+	
+	.lasse h2 {
+		color: #606060;
+		margin-left: 5vw;
+	}
+	
+	.lasse p {
+		color: #D6A900;
+		font-size: 16.5px;
+		font-family: 'Lato', sans-serif;
+		margin-left: 9vw;
+		margin-bottom: 10vh;
+	}
+	
+	.vision-mission {
+		width: 100vw;
+		height: 45vh;
+		display: grid;
+		grid-template-areas: 
+			'vision mission';
+	}
+
+	.vision {
+		background-color: #ddd;
+		width: 50vw;
+		height: auto;
+	}
+
+	.vision h2 {
+		margin-top: 6vh;
+		margin-left: 10vw;
+	}
+
+	.vision p {
+		margin-left: 10vw;
+		margin-right: 10vw;
+		font-family: 'Lato', sans-serif;
+	}
+
+	.mission {
+		background-color: #ddd;
+		width: 50vw;
+		height: auto;
+	}
+
+	.mission h2 {
+		margin-top: 6vh;
+		margin-left: 10vw;
+	}
+
+	.mission p {
+		margin-left: 10vw;
+		margin-right: 10vw;
+		font-family: 'Lato', sans-serif;
+	}
+	
+	.tekst-til-historie {
+		width: 100vw;
+		height: auto;
+		grid-template-areas: 
+		'kolonne1 kolonne2 kolonne3';
+	}
+
+	.kolonne1 {
+		width: 20vw;
+		height: auto;
+		margin-left: 11vw;
+		margin-top: 5vh;
+	}
+	
+	.kolonne1 h3, p {
+		line-height: 1.3em;
+		font-family: 'Lato', sans-serif;
+	}
+
+	.kolonne2 {
+		width: 20vw;
+		height: auto;
+		margin-left: -5vw;
+		margin-top: 5vh;
+	}
+	
+	.kolonne2 h3, p {
+		line-height: 1.3em;
+		font-family: 'Lato', sans-serif;
+	}
+
+	.kolonne3 {
+		width: 20vw;
+		height: auto;
+		margin-left: -5vw;
+		margin-top: 5vh;
+	}
+	
+
 	/* --- STOL ------------------------------------------------------------------------- */
 	.grid-container-stol {
 		margin: 0 10vw;
@@ -776,6 +2762,18 @@ footer p {
 	
 	
 	/* --- KONTAKT --------------------------------------------------------------------- */
+
+	.kolonne3 h3, p {
+		line-height: 1.3em;
+		font-family: 'Lato', sans-serif;
+	}
+	
+	
+	
+	
+	
+	
+	/* --- KONTAKT --- */
 	.grid-container-kontakt {
 		display: grid;
 		grid-template-areas: 
@@ -912,7 +2910,7 @@ footer p {
 		background-color: #144041;
 	}
 	
-	/* --- FOOTER ---*/
+	/* --- FOOTER ------------------------------------------------------------------------- */
 	
 	footer {
 		width: 100vw;
