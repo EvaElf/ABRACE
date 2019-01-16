@@ -14,7 +14,7 @@
 	<header>
 		<div class="mobile-bar">
 			<div id="menu-button"><a href="#"><span><i class="fas fa-bars fa-2x menu-icon"></i></span></a></div>
-			<div id="menu-cart"><a href="#"><span><i class="fas fa-shopping-cart fa-2x menu-icon"></i></span></a></div>
+			<div id="menu-cart"><a href="kurv.html"><span><i class="fas fa-shopping-cart fa-2x menu-icon"></i></span></a></div>
 			<div class="logo">
 				<img src="image/ABRACE logo.svg" alt="ABRACE logo">
 			</div>
@@ -22,9 +22,9 @@
 			<nav>
 				<a href="#" id="menu-button-close"><span><i class="fas fa-times fa-2x"></i></span></a>
 				<ul>
-					<li class="active"><a href="index.html">Forside</a></li>
+					<li><a href="index.html">Forside</a></li>
 					<li class="dropdown">
-						<a href="produkter.html" class="dropdown-button">Produkter</a>
+						<a href="produkter.html" class="dropdown-button active">Produkter</a>
 						<div class="dropdown-content">
 							<a href="stol.html">Stol</a>
 							<a href="fodgynge.html">Fodgynge</a>
@@ -53,55 +53,63 @@
 			</div>
 			<div class="main-image">
 				<span onClick="this.parentElement.style.display='block'"></span>
-				<img src="image/ABRACE-stol1-blue.jpg" alt="stol front" id="showedImg">
+				<img src="image/ABRACE_pictures/ponchoonmancloser.png" alt="stol front" id="showedImg">
 				<div id="imgtext"></div>
 			</div>
 			<div class="gallery-images">
-				<img src="image/ABRACE-stol2-blue.jpg" alt="stol front med tæpper" id="gallery1">
-				<img src="image/ABRACE-stol3-blue.jpg" alt="stol fra siden" id="gallery2">
-				<img src="image/ABRACE-stol4-blue.jpg" alt="stol close-up" id="gallery3">
-				<img src="image/ABRACE-stol5-blue.jpg" alt="farvevalg" id="gallery4">
+				<img src="image/ABRACE-stol5-blue.jpg" alt="stol front med tæpper" id="gallery1">
+				<img src="image/ABRACE-stol5-gray.jpg" alt="stol fra siden" id="gallery2">
 			</div>
 			
 			<div class="specifications">
 				<h2>Beskrivelse</h2>
-				<p>ABRACE er en klassisk komfortabel lænestol med øreklapper, der passer ind i de fleste hjem.</p>
-				<p>Den fås i farverne blå eller mørkegrå.</p>
-				<p>ABRACE er tilgængelig i to udgaver. En udgave, hvor hele stolen er betrukket med tekstil eller i en kombination af tekstil på ydersiden og kunstlæder på indersiden.</p>
-				<p>ABRACE passer til dig, der er mellem 150cm og 200cm høj.</p>
+				<p>Ponchoen er et vægttæppe, der kan bæres over skuldrene eller bruges som skuldertæppe i stolen.</p>
+				<p>Ponchoens vægt øger kropsbevidstheden, giver ro og en fornemmelse af at være omfavnet.</p>
+				<p>Den fås i blåt eller gråt tekstil med fyld af plastikgranulat.</p>
+				<p>Ponchoen er monteret med fleksible bærestropper, der kan sættes på efter behov. Stropper gør det nemt at transportere ponchoen, når den ikke er i brug, samt gør det muligt at montere den på andre stole.</p>
+				<p>Ponchoen kan lynes sammen med krammepuden. </p>
 				<h4>Specifikationer</h4>
-				<p>Mål: 110cm x 100cm x 80 cm</p>
-				<p>Vægt: 30kg</p>
+				<p>Mål: 150cm x 60cm.</p>
+				<p>Vægt: 3kg eller 6kg </p>
 				<h4>Materialer</h4>
 				<p>Tekstil: 100% Trevira CS – brandhæmmende polyester.</p>
-				<p>Kunstlæder: 66% polyurethan , 24% polyester og 10% bomuld.</p>
-				<p>Skal: Kombination af to lag fiberglas med en kerne af skum med høj densitet.</p>
-				<p>Polstring: Det brandhæmmende skum med høj densitet sikrer lang levetid og god siddekomfort.</p>
-				<p>Rengøring: Kan aftørres med en fugtig, hårdt opvredet klud.</p>
+				<p>Fyld: Plastikgranulat.</p>
+				<p>Rengøring: Ponchoen kan vaskes i maskine ved 60&deg;C. Tåler vaskemiddel.  Maximum krybningsgrad: 3%. </p>
 				
 				<h4 id="color-choice-text">Blå, tekstil</h4>
 				<div class="color-choice">
-					<img src="image/ABRACE-stol5-blue.jpg" alt="blå tekstil" id="blue" onClick="changeColor(this)">
-					<img src="image/ABRACE-stol5-bluecombi.jpg" alt="blå kombi" id="bluecombi" onClick="changeColor(this)">
-					<img src="image/ABRACE-stol5-gray.jpg" alt="grå tekstil" id="gray" onClick="changeColor(this)">
-					<img src="image/ABRACE-stol5-graycombi.jpg" alt="grå kombi" id="graycombi" onClick="changeColor(this)">
+					<img src="image/ABRACE-stol5-blue.jpg" alt="blå tekstil" id="blue">
+					<img src="image/ABRACE-stol5-gray.jpg" alt="grå tekstil" id="gray">
 				</div>
 				
-				<h4 id="price-text">8.964 DKK</h4>
+				<h4 id="price-text">3.735 DKK</h4>
 				<div id="buy">
 					<h4>Køb</h4>
 				</div>
 			</div>
 			
+			<h2 class="other-text">Andre har tilkøbt</h2>
 			<div class="other-items">
-				<h2 class="other-text">Andre har tilkøbt</h2>
-				<img src="image/ABRACE-stol2-blue.jpg" alt="Grå abrace stol front" id="other-fodgynge">
-				<img src="image/ABRACE-stol2-blue.jpg" alt="Grå abrace stol front" id="other-tyngde">
-				<img src="image/ABRACE-stol2-blue.jpg" alt="Grå abrace stol front" id="other-poncho">
-				<img src="image/ABRACE-stol2-blue.jpg" alt="Grå abrace stol front" id="other-kramme">
-			</div>
+				<div class="other1">
+					<a href="stol.html"><img src="image/ABRACE-stol1-blue.jpg" alt="stol"></a>
+					<a href="stol.html">Stol</a>
+				</div>
+				
+				<div class="other2">
+					<a href="fodgynge.html"><img src="image/fodgynge1.jpg" alt="fodgynge"></a>
+					<a href="fodgynge.html">Fodgynge</a>
+				</div>
+				
+				<div class="other3">
+					<a href="tyngdetaepper.html"><img src="image/tyngde3-blue.jpg" alt="tyngdetæpper"></a>
+					<a href="tyngdetaepper.html">Tyngdetæpper</a>
+				</div>
 			
-
+				<div class="other4">
+					<a href="krammepude.html"><img src="image/ABRACE_pictures/pillowonman.png" alt="krammepude"></a>
+					<a href="krammepude.html">Krammepude</a>
+				</div>
+			</div>
 		</div>
 	</main>
 	

@@ -27,6 +27,7 @@ html, body {
 	top: 0;
 	left: 0;
 	background-color: #002728;
+	z-index: 10;
 }
 
 .menu-icon {
@@ -96,7 +97,7 @@ nav ul {
 }
 
 nav ul li {
-	margin: 20px;
+	margin: 40px 20px;
 }
 
 nav ul li a {
@@ -104,6 +105,7 @@ nav ul li a {
 	font-size: 20px;
 	color: white;
 	margin: 20px;
+	
 }
 
 .cart {
@@ -114,7 +116,7 @@ nav ul li a {
 }
 
 .cart a {
-	padding: 0 10px;
+	padding: 0;
 	margin: 0;
 }
 
@@ -122,6 +124,11 @@ nav ul li a {
 	content: "Kurv";
 	padding: 0 10px;
 	margin: 0;
+}
+
+.dropdown-content a {
+	display: block;
+	margin: 20px 0 20px 100px;
 }
 
 /*---- FORSIDE -----------------------------*/
@@ -205,8 +212,7 @@ nav ul li a {
 	width: 100vw;
 	margin-top: 7vh;
 	padding: 4vh 0vw 0vh 0;
-	border: solid #A1A1A1;
-	background-color: #E7E7E1;
+	background-color: #f5f5f5;
 }
 
 .productswing{
@@ -232,28 +238,32 @@ nav ul li a {
 .productstitles, .productstitlechair{
 	font-family: 'Lato', sans-serif;
 	font-size: 2.5vh;
-	padding-left: 5vw;
+	margin-left: 7vw;
 	color: #000;
+	display: inline-block;
 }
 
 .read-more-button{
 	font-family: 'Lato', sans-serif;
 	font-size: 2.5vh;
-	width:110px;
+	width: 25vw;
+	display: inline-block;
 	float: right;
-	margin-top: -7vh;
 	margin-right: 10vw;
+	margin-top: 1vh;
 	padding: 1.5vh;
 	color: #FFF;
 	background-color: #002728;
 	text-align: center;
 }
 
+a.read-more-button {
+	text-decoration: none;
+}
 
 .productpic{
-	border: solid #A1A1A1;
 	width: 100vw;
-	background-color: #E7E7E1;
+	background-color: #f5f5f5;
 }
 
 #torighttitle, #torighttitle1{
@@ -264,38 +274,17 @@ nav ul li a {
 .grid-container-produkter{
 	display: grid;
 	grid-template-areas: 
-		'logo logo'
-		'nav nav'
 		'chair chair'
 		'swing swing'
 		'blanket blanket'
 		'poncho poncho'
-		'pillow pillow'
-		'foot foot';
+		'pillow pillow';
 }
 
 
 #toright,#toright1{
 		top: 0vh;
 	}
-
-.kurvtekst{
-	margin-top: 10vh;
-	margin-left: 5vw;
-	width: 90vw;
-	height: 50vh;
-	font-size: 3vh;
-	font-family: 'Kozuka Gothic PR6N', sans-serif;
-	color: #000;
-	margin-bottom: 30vh;
-}
-
-.tilbageknap{
-	color: #FFF;
-	background-color: #002728;
-	padding: 2vh 3vw;
-	font-size: 2.5vh;
-}
 
 /* --- STOL ------------------------------------------------------------- */
 .grid-container-stol {
@@ -326,7 +315,8 @@ nav ul li a {
 
 .main-image img {
 	width: 100vw;
-	padding-bottom: 10px;
+	margin-bottom: 10px;
+	background-color: #f5f5f5;
 }
 
 #gallery1{grid-area: g1;}
@@ -338,12 +328,12 @@ nav ul li a {
 	width: 100vw;
 	margin: 0 auto;
 	text-align: center;
+	
 }
 
 .gallery-images img {
 	width: 45vw;
 	margin: 1vw;
-	
 }
 
 .specifications {
@@ -398,39 +388,72 @@ nav ul li a {
 
 .other-text {
 	grid-area: other;
-	margin: 40px 4vw 20px;
+	margin: 40px auto 20px;
 }
 
 .other-items {
 	grid-area: other-items;
+	display: grid;
+	grid-template-areas: 
+		'other1 other2'
+		'other3 other4';
 	width: 100vw;
-	margin: 0 auto;
-	text-align: center;
 }
 
 .other-items img {
 	display: inline-block;
 	width: 45vw;
 	margin: 1vw;
+	background-color: #f5f5f5;
+	position: relative;
+}
+
+.other-items a:nth-child(1) {
+	height: 45vw;
+}
+
+.other-items a:nth-child(2) {
+	text-decoration: none;
+	background-color: #002728;
+	color: white;
+	padding: 14px 20px;
+	position: relative;
+	top: -10vh;
+	right: 6vw;
+	float: right;
+}
+
+.other1 {
+	grid-area: other1;
+	margin: 0 0 0 auto;
+}
+
+.other2 {
+	grid-area: other2;
+	margin: 0 auto 0 0;
+}
+
+.other3 {
+	grid-area: other3;
+	margin: 0 0 0 auto;
+}
+
+.other4 {
+	grid-area: other4;
+	margin: 0 auto 0 0;
 }
 
 
 /* --- DOKUMENTATION ------------------------------------------------------- */
-
 .grid-container-dokumentation {
 	display: grid;
-	grid-template-areas: 
-		'logo logo logo'
-		'nav nav nav'
+	grid-template-areas:
 		'banner banner banner'
-		'citat1 citat1 citat1'
-		'citat2 citat2 citat2'
-		'citat3 citat3 citat3'
+		'cc cc cc'
 		'titel-dokumentation titel-dokumentation titel-dokumentation'
 		'tekst-til-dokumentation tekst-til-dokumentation tekst-til-dokumentation'
 		'titel-samarbejdspartnere titel-samarbejdspartnere titel-samarbejdspartnere'
-		'samarbejdsparnere  samarbejdsparnere  samarbejdsparnere'
-		'foot foot foot'; 
+		'samarbejdsparnere  samarbejdsparnere  samarbejdsparnere'; 
 }
 
 
@@ -444,44 +467,52 @@ nav ul li a {
 	padding-top: 10vh;
 }
 
+.citat-container {
+	grid-area: cc;
+	display: grid;
+	grid-template-areas: 
+		'citat1'
+		'bruger1'
+		'citat2'
+		'bruger2'
+		'citat3'
+		'bruger3';
+}
+
 .citat1 {
 	grid-area: citat1;
 	width: 90vw;
 	height: auto;
 	margin-top: 4vh;
 	margin-left: 6vw;
-}
-
-.citat1 q {
 	font-size: 17px;
 	font-style: italic;
 	line-height: 1.5em;
 }
 
-.citat1 p {
-	font-size: 13px;
-	margin-top: 2vh;
-	margin-left: 43vw;
+.bruger1 {
+	grid-area: bruger1;
+	font-size: 14px;
+	margin: 2vh 6vw 0 0;
+	text-align: right;
 }
 
 .citat2 {
 	grid-area: citat2;
-	width: 95vw;
+	width: 90vw;
 	height: auto;
 	margin-top: 4vh;
 	margin-left: 5vw;
-}
-
-.citat2 q {
 	font-size: 17px;
 	font-style: italic;
 	line-height: 1.5em;
 }
 
-.citat2 p {
-	font-size: 13px;
-	margin-top: 3vh;
-	margin-left: 15vw;
+.bruger2 {
+	grid-area: bruger2;
+	font-size: 14px;
+	margin: 3vh 5vw 0 0;
+	text-align: right;
 }
 
 .citat3 {
@@ -489,19 +520,17 @@ nav ul li a {
 	width: 90vw;
 	height: auto;
 	margin-top: 4vh;
-	margin-left: 6vw;
-}
-
-.citat3 q {
+	margin-left: 5vw;
 	font-size: 16px;
 	font-style: italic;
 	line-height: 1.5em;
 }
 
-.citat3 p {
-	font-size: 13px;
-	margin-top: 3vh;
-	margin-left: 3vw;
+.bruger3 {
+	grid-area: bruger3;
+	font-size: 14px;
+	margin: 3vh 5vw 0 0;
+	text-align: right;
 }
 
 .titel-dokumentaion {
@@ -563,6 +592,10 @@ nav ul li a {
 	grid-area: spalte2;
 	width: 100vw;
 	height: auto;
+}
+
+.spalte2 a {
+	color: #D6A900;
 }
 
 .spalte2 h3 {
@@ -670,7 +703,7 @@ nav ul li a {
 	grid-area: lejbjergcentret;
 	width: 15vw;
 	height: auto;
-	margin-top: 2vh;
+	margin-top: 8vh;
 	margin-left: 5vw;
 }
 
@@ -718,7 +751,7 @@ nav ul li a {
 	grid-area: plejecenter;
 	width: 15vw;
 	height: auto;
-	margin-top: 2vh;
+	margin-top: 4vh;
 	margin-left: 5vw;
 }
 
@@ -784,181 +817,92 @@ nav ul li a {
 	grid-area: vester-mariensdal-skole;
 	width: 15vw;
 	height: auto;
-	margin-top: 2vh;
+	margin-top: 9vh;
 	margin-left: 5vw;
 }
 
-.herning-psykiatri img {
-	width: auto;
-	height: 5vh;
-}
-
-.randers-psykiatri img {
-	width: auto;
-	height: 5vh;
-}
-
-.horsens-psykiatri img {
-	width: auto;
-	height: 5vh;
-}
-
-.lejbjergcentret img {
-	width: auto;
-	height: 4.5vh;
-}
-
-.marco-polo img{
-	width: auto;
-	height: 4.5vh;
-}
-
-.gug-geronto img {
-	width: auto;
-	height: 4.5vh;
-}
-
-.attruphoj img {
-	width: auto;
-	height: 5vh;
-}
-
-.taleinstituttet img {
-	width: auto;
-	height: 4.5vh;
-}
-
-.odense-psykiatri img {
-	width: auto;
-	height: 6vh;
-}
-
-.plejecenter-stoberiet img {
-	width: auto;
-	height: 5vh;
-}
-
-.hjallerup-skole img {
-	width: auto;
-	height: 5vh;
-}
-
-.solkrogen img {
-	width: auto;
-	height: 5vh;
-}
-
-.ringstedshave img {
-	width: auto;
-	height: 5vh;
-}
-
-.headspace img {
-	width: auto;
-	height: 5vh;
-}
-
-.dronning-ingrid-hospital img {
-	width: auto;
-	height: 5vh;
-}
-
-.seminarieskolen img {
-	width: auto;
-	height: 8vh;
-}
-
-.skovsgard-tranum-skole img {
-	width: auto;
-	height: 12vh;
-}
-
-.vester-mariendal-skole img {
-	width: auto;
-	height: 8vh;
+.samarbejdspartnere img {
+	width: 20vw;
+	vertical-align: center;
 }
 
 /* --- OM OS ------------------------------------------------------- */
 
 .grid-container-om-os {
 	display: grid;
-	grid-template-areas: 
-		'logo logo logo'
-		'nav nav nav'
+	grid-template-areas:
 		'kristine kristine kristine' 
 		'maya maya maya' 
 		'lasse lasse lasse'
 		'vision-mission vision-mission  vision-mission' 
 		'titel-historie titel-historie titel-historie'
-		'tekst-til-historie tekst-til-historie tekst-til-historie'
-		'foot foot foot';
+		'tekst-til-historie tekst-til-historie tekst-til-historie';
+	width: 100vw;
 }
 
 .kristine {
 	grid-area: kristine;
 	margin-top: 20vh;
+	text-align: center;
 }
 
 .kristine img {
 	width: auto;
 	height: 40vh;
-	margin-left: 15vw;
 }
 
 .kristine h2 {
 	color: #606060;
-	margin-left: 25vw;
+	margin-bottom: .5em
 }
 
 .kristine p {
 	color: #D6A900;
 	font-size: 18px;
-	margin-left: 37vw;
+	margin-top: .5em;
 }
 
 .maya {
 	grid-area: maya;
 	margin-top: 5vh;
+	text-align: center;
 }
 
 .maya img {
 	width: auto;
 	height: 40vh;
-	margin-left: 15vw;
 }
 
 .maya h2 {
 	color: #606060;
-	margin-left: 30vw;
+	margin-bottom: .5em;
 }
 .maya p {
 	color: #D6A900;
 	font-size: 18px;
-	margin-left: 38vw;
+	margin-top: .5em;
 }
 
 .lasse {
 	grid-area: lasse;
 	margin-top: 5vh;
+	text-align: center;
 }
 
 .lasse img {
 	width: auto;
 	height: 40vh;
-
-
-	margin-left: 15vw;
 }
 
 .lasse h2 {
 	color: #606060;
-	margin-left: 30vw;
+	margin-bottom: .5em;
 }
 .lasse p {
 	color: #D6A900;
 	font-size: 18px;
-	margin-left: 44vw;
 	margin-bottom: 8vh;
+	margin-top: .5em;
 }
 
 .vision-mission {
@@ -979,13 +923,13 @@ nav ul li a {
 }
 
 .vision h2 {
-	margin-left: 10vw;
+	margin-left: 5vw;
 }
 
 .vision p {
 	font-size: 16px;
 	line-height: 1.3em;
-	margin-left: 10vw;
+	margin-left: 5vw;
 	margin-right: 10vw;
 }
 
@@ -997,13 +941,13 @@ nav ul li a {
 }
 
 .mission h2 {
-	margin-left: 10vw;
+	margin-left: 5vw;
 }
 
 .mission p {
 	font-size: 16px;
 	line-height: 1.3em;
-	margin-left: 10vw;
+	margin-left: 5vw;
 	margin-right: 10vw;
 }
 
@@ -1084,17 +1028,21 @@ nav ul li a {
 	font-family: 'Lato', sans-serif;
 }
 
+.kolonne4 {
+	display: none;
+}
+
 
 /* --- KONTAKT ---------------------------------------------- */
 
 .grid-container-kontakt {
 	display: grid;
 	grid-template-areas: 
-		'billede-af-stol billede-af-stol billede-af-stol billede-af-stol'
 		'titel1 titel1 titel1 titel1'
 		'kontakt-info kontakt-info kontakt-info kontakt-info'
 		'titel2 titel2 titel2 titel2'
-		'skriv-til-os skriv-til-os skriv-til-os skriv-til-os';
+		'skriv-til-os skriv-til-os skriv-til-os skriv-til-os'
+		'billede-af-stol billede-af-stol billede-af-stol billede-af-stol';
 }
 
 
@@ -1104,12 +1052,14 @@ nav ul li a {
 
 .billede-af-stol img {
 	width: 100vw;
+	margin-bottom: -20px;
 }
 
 .titel1 {
 	grid-area: titel1;
 	width: 99vw;
 	height: 10vh;
+	margin-top: 12vh;
 	z-index: -1;
 }
 
@@ -1142,6 +1092,7 @@ nav ul li a {
 	width: 90vw;
 	height: 30vh;
 	margin-left: 5vw;
+
 }
 
 .ikoner {	
@@ -1214,21 +1165,20 @@ nav ul li a {
 .skriv-til-os {
 	grid-area: skriv-til-os;
 	width: 90vw;
-	height: 65vh;
+	height: 50vh;
 	margin-left: 5vw;
 }
 
 .kontakt-formular {
-	border-radius: 5px;
 	background-color: #f2f2f2;
 	padding: 30px;
 }
 
 input[type=text], select, textarea {
-	width: 75vw;
+	width: 83vw;
+	display: block;
 	padding: 12px;
 	border: 1px solid #ccc;
-	border-radius: 4px;
 	margin-top: 2vh;
 	margin-bottom: 2vh;
 	resize: vertical;
@@ -1240,11 +1190,33 @@ input[type=submit] {
 	color: white;
 	padding: 1.5vh 5vw;
 	border: none;
-	border-radius: 4px;
 	cursor: pointer;
 	font-family: 'Lato', sans-serif;
 }
 
+/* --- KURV ----------------------------------------------- */
+
+.kurvtekst{
+	margin-top: 10vh;
+	margin-left: 5vw;
+	width: 90vw;
+	height: 50vh;
+	font-size: 3vh;
+	font-family: 'Kozuka Gothic PR6N', sans-serif;
+	color: #000;
+	margin-bottom: 30vh;
+}
+
+.tilbageknap{
+	color: #FFF;
+	background-color: #002728;
+	padding: 2vh 3vw;
+	font-size: 2.5vh;
+}
+
+a.tilbageknap {
+	text-decoration: none;
+}
 
 /* --- FOOTER ---------------------------------------------- */
 
@@ -1259,6 +1231,7 @@ footer p {
 	color: white;
 	font-family: 'Lato', sans-serif;
 	margin-left: 5vw;
+	padding-top: 2vh;
 }
 
 /* style for tablet (portrait) and upwards */
@@ -1275,8 +1248,11 @@ footer p {
 	.citat {
 		width: 35vw;
 		height: auto;
-		margin-top: -22vh;
+		margin-top: 0;
 		margin-left: 8vw; 
+		position: absolute;
+		top: 20vh;
+		z-index: -1;
 	}
 
 	.citat p {
@@ -1296,10 +1272,6 @@ footer p {
 		width: 100vw;
 		height: auto;
 		padding-top: 10vh;
-	}
-
-	.tekst-om-firma {
-		width: 80vw;
 	}
 
 	.titel-firma h2 {
@@ -1327,64 +1299,89 @@ footer p {
 		left: 18px;
 	}
 	
+	.tekst-om-firma {
+		display: grid;
+		grid-template-areas: 
+			's1 s2';
+		width: 80vw;
+	}
+	
+	.forside-s1 {
+		grid-area: s1;
+		width: 35vw;
+	}
+	
+	.forside-s2 {
+		grid-area: s2;
+		width: 35vw;
+		margin: 0 0 0 auto;
+	}
 	
 	/* --- PRODUKTER -----------------*/
 	.grid-container-produkter{
-	grid-template-areas: 
-		'logo logo logo logo'
-		'nav nav nav nav'
+	grid-template-areas:
 		'chair chair chair chair'
 		'swing swing blanket blanket'
-		'poncho poncho pillow pillow'
-		'foot foot foot foot';
-}
+		'poncho poncho pillow pillow';
+	}
 
 	.productpic{
-		width: 40vw;
-		margin: -5vh 4vw;
+		width: 44vw;
+		margin: 5vh 4vw;
 		z-index: -3;
 		position: relative;
 	}
 	
 	.chairpic{
 		width: 90vw;
-		margin: 5vh 4vw -13vh;
-		padding: 8vh 0vw 0;
+		margin: 17vh 4vw -13vh;
+		padding: 0;
 		z-index: -3;
 		position: relative;
 	}
 	
 	.read-more-button{
-		font-size: 3vh;
 		width: 150px;
 		position: relative;
 		z-index: -1;
 		right: -2vw;
-		top:-5vh;
+		top: -10vh;
 	}
 	
 	#chairbutton{
-		top: -5vh;
+		top: 3vh;
 	}
 	
+	
 	.productstitles{
-		top:-50vh;
+		top: -50vh;
 		left: 0.1vw;
 		position: relative;
 		z-index: -1;
 	}
 	
 	.productstitlechair{
-		top:0vh;
-		left:2vw;
-		position: relative;
+		top: 16vh;
+		left: 2vw;
+		position: absolute;
 		z-index: -1;
-		font-size: 5vh;
+		font-size: 2em;
 	}
 	
-	.kurvtekst{
-		text-align: center;
-		font-size: 4vh;
+	.productswing img {
+		margin: 5vh 0 0 4vw;
+	}
+	
+	.productblanket img {
+		margin: 5vh 4vw 0 0;
+	}
+	
+	.productponcho img {
+		margin: 0 0 0 4vw;
+	}
+	
+	.productspillow img {
+		margin: 0 4vw 0 0;
 	}
 	
   /*--- STOL ------------------------------------------*/
@@ -1424,16 +1421,13 @@ footer p {
 	
 /* ---- DOKUMENTATION ---------------------------------*/	
 	.grid-container-dokumentation {
-		grid-template-areas: 
-			'logo logo logo'
-			'nav nav nav'
+		grid-template-areas:
 			'banner banner banner'
-			'citat1 citat2 citat3'
+			'cc cc cc'
 			'titel-dokumentation titel-dokumentation titel-dokumentation'
 			'tekst-til-dokumentation tekst-til-dokumentation tekst-til-dokumentation'
 			'titel-samarbejdspartnere titel-samarbejdspartnere titel-samarbejdspartnere'
-			'samarbejdsparnere  samarbejdsparnere  samarbejdsparnere'
-			'foot foot foot';
+			'samarbejdsparnere  samarbejdsparnere  samarbejdsparnere';
 	}
 	
 	.banner-dokumentation img {
@@ -1441,59 +1435,53 @@ footer p {
 		height: auto;
 	}
 	
+	
+	.citat-container {
+		grid-area: cc;
+		display: grid;
+		grid-template-areas: 
+			'citat1 citat2 citat3'
+			'bruger1 bruger2 bruger3';
+	}
+
 	.citat1 {
 		width: 26vw;
 		height: auto;
 		margin-left: 6vw;
-	}
-	
-	.citat1 q {
-		font-size: 18px;
-		line-height: 1.5em;
-		font-style: italic;
-	}
-	
-	.citat1 p {
 		margin-top: 4vh;
+		font-size: 18px;
+		font-style: italic;
 		line-height: 1.5em;
-		margin-left: 2vw; 
+	}
+	
+	.bruger1 {
+		line-height: 1.5em;
 		font-size: 14px;
+		margin: 0 5vw auto 0;
 	}
 	
 	.citat2 {
 		width: 25vw;
 		height: auto;
-	}
-	
-	.citat2 q {
 		font-size: 18px;
-		line-height: 1.5em;
-		font-style: italic;
 	}
 	
-	.citat2 p {
+	.bruger2 {
 		font-size: 14px;
 		line-height: 1.3em;
-		margin-left: 1vw; 
-		margin-top: 4vh;
+		margin: 0 5vw auto 0;
 	}
 
 	.citat3 {
 		width: 24vw;
 		height: auto;
-	}
-	
-	.citat3 q {
 		font-size: 18px;
-		line-height: 1.5em;
-		font-style: italic;
 	}
 	
-	.citat3 p {
+	.bruger3 {
 		font-size: 14px;
 		line-height: 1.5em;
-		margin-top: 4vh;
-		margin-left: 1vw; 
+		margin: 0 5vw auto 0;
 	}
 	
 	.titel-dokumentaion h2 {
@@ -1612,6 +1600,7 @@ footer p {
 			'plejecenter hjallerup-skole solkrogen'
 			'ringstedshave headspace dronnig-ingrid-hospital'
 			'seminarieskolen skovsgård-tranum-skole vester-mariensdal-skole';
+		width: 90vw;
 	}
 	
 	.herning-psykiatri {
@@ -1695,14 +1684,14 @@ footer p {
 		width: 15vw;
 		height: auto;
 		margin-top: 5vh;
-		margin-left: 10vw;
+		margin-left: 5vw;
 	}
 
 	.ringstedshave {
 		width: 15vw;
 		height: auto;
 		margin-top: 5vh;
-		margin-left: 5vw;
+		margin-left: 10vw;
 	}
 
 	.headspace {
@@ -1741,170 +1730,72 @@ footer p {
 	}
 
 	
-	.herning-psykiatri img {
-		width: auto;
-		height: 5vh;
-	}
-	
-	.randers-psykiatri img {
-		width: auto;
-		height: 5vh;
-	}
-	
-	.horsens-psykiatri img {
-		width: auto;
-		height: 5vh;
-	}
-	
-	.lejbjergcentret img {
-		width: auto;
-		height: 5vh;
-	}
-	
-	.marco-polo img{
-		width: auto;
-		height: 5vh;
-	}
-	
-	.gug-geronto img {
-		width: auto;
-		height: 5vh;
-	}
-
-	.attruphoj img {
-		width: auto;
-		height: 5vh;
-	}
-
-	.taleinstituttet img {
-		width: auto;
-		height: 5vh;
-	}
-
-	.odense-psykiatri img {
-		width: auto;
-		height: 7vh;
-	}
-	
-	.plejecenter-stoberiet img {
-		width: auto;
-		height: 5vh;
-	}
-
-	.hjallerup-skole img {
-		width: auto;
-		height: 5vh;
-	}
-
-	.solkrogen img {
-		width: auto;
-		height: 5vh;
-	}
-
-	.ringstedshave img {
-		width: auto;
-		height: 5vh;
-	}
-
-	.headspace img {
-		width: auto;
-		height: 5vh;
-	}
-
-	.dronning-ingrid-hospital img {
-		width: auto;
-		height: 5vh;
-	}
-
-	.seminarieskolen img {
-		width: auto;
-		height: 7vh;
-	}
-
-	.skovsgard-tranum-skole img {
-		width: auto;
-		height: 10vh;
-	}
-
-	.vester-mariendal-skole img {
-		width: auto;
-		height: 8vh;
-	}
 
 	/* --- OM OS ------------------------------------------------------------------------- */
 	.grid-container-om-os {
-		grid-template-areas: 
-			'logo logo logo'
-			'nav nav nav'
+		grid-template-areas:
 			'kristine maya lasse'
 			'vision-mission vision-mission vision-mission' 
 			'titel-historie titel-historie titel-historie'
-			'tekst-til-historie tekst-til-historie tekst-til-historie'
-			'foot foot foot';
+			'tekst-til-historie tekst-til-historie tekst-til-historie';
 	}
 
 	.kristine {
 		margin-top: 20vh;
+		text-align: center;
 	}
 
 	.kristine img {
 		width: auto;
 		height: 20vh;
-		margin-left: 5vw;
 	}
 
 	.kristine h2 {
 		color: #606060;
-		margin-left: 7vw;
 	}
 
 	.kristine p {
 		color: #D6A900;
 		font-size: 18px;
-		margin-left: 13vw;
 	}
 
 	.maya {
 		margin-top: 5vh;
+		text-align: center;
 	}
 
 	.maya img {
 		width: auto;
 		height: 20vh;
 		margin-top: 15vh;
-		margin-left: 1vw;
 	}
 
 	.maya h2 {
 		color: #606060;
-		margin-left: 5vw;
 	}
 	.maya p {
 		color: #D6A900;
 		font-size: 18px;
-		margin-left: 9vw;
 	}
 
 	.lasse {
 		margin-top: 5vh;
+		text-align: center;
 	}
 
 	.lasse img {
 		width: auto;
 		height: 20vh;
 		margin-top: 15vh;
-		margin-left: 1vw;
 	}
 
 	.lasse h2 {
 		color: #606060;
-		margin-left: 5vw;
 	}
 
 	.lasse p {
 		color: #D6A900;
 		font-size: 18px;
-		margin-left: 12vw;
 		margin-bottom: 5vh;
 	}
 
@@ -1978,16 +1869,16 @@ footer p {
 	.tekst-til-historie {
 		grid-area: tekst-til-historie;
 		display: grid;
-		width: 100vw;
+		width: 90vw;
 		height: auto;
 		grid-template-areas: 
-			'kolonne1 kolonne1 kolonne1'
-			'kolonne2 kolonne2 kolonne2'
-			'kolonne3 kolonne3 kolonne3';
+			'kolonne1 kolonne3'
+			'kolonne2 kolonne4';
+		margin: 0 auto;
 	}
 
 	.kolonne1 {
-		width: 90vw;
+		width: 40vw;
 		height: auto;
 		margin-left: 5vw;
 	}
@@ -1998,7 +1889,7 @@ footer p {
 	}
 
 	.kolonne2 {
-		width: 90vw;
+		width: 40vw;
 		height: auto;
 		margin-left: 5vw;
 	}
@@ -2009,8 +1900,7 @@ footer p {
 	}
 
 	.kolonne3 {
-		grid-area: kolonne3;
-		width: 90vw;
+		width: 40vw;
 		height: auto;
 		margin-left: 5vw;
 	}
@@ -2019,13 +1909,33 @@ footer p {
 		line-height: 1.3em;
 		font-family: 'Lato', sans-serif;
 	}
+	
+	.kolonne4 {
+		grid-area: kolonne4;
+		display: block;
+		margin: auto auto 0;
+	}
+	
+	.kolonne4 img {
+		width: 40vw;
+	}
 }
 
 /* ----- KONTAKT------------------------------------------------------------*/
 
 
+/* --- KURV ---------------------------------------------------------------------------*/
+	.kurvtekst{
+		text-align: center;
+		font-size: 4vh;
+	}
+
 /* style for tablet (landscape) and upwards */
 @media screen and (min-width: 1024px) {	
+	p {
+		font-size: 18px;
+	}
+	
 	.logo {
 		width: 100vw;
 	}
@@ -2111,7 +2021,7 @@ footer p {
 		text-decoration: none;
 		display: block;
 		text-align: left;
-		
+		margin: 0;
 	}
 	
 	.dropdown:hover .dropdown-content {
@@ -2133,8 +2043,7 @@ footer p {
 		color: #D6A900;
 	}
 	
-	.active:hover {
-		background-color: #002728;
+	.active {
 		color: #D6A900;
 	}
 	
@@ -2152,8 +2061,10 @@ footer p {
 	.citat {
 		width: 35vw;
 		height: 50vh;
-		margin-top: -50vh;
 		margin-left: 10vw; 
+		position: absolute;
+		top: 30vh;
+		z-index: -1;
 	}
 	
 	.citat p {
@@ -2202,27 +2113,20 @@ footer p {
 		left: 86px;
 	}
 	
-/*	.tekst-om-firma {
-		width: 80vw;
-		margin: 0 auto;
-		
-	}*/
+
 	
 	
 	/* --- PRODUKTER --------------------------------------------*/
-	.grid-container-kontakt {
-		grid-template-areas: 
-		'logo logo logo logo'
-		'nav nav nav nav'
+	.grid-container-produkter {
+		grid-template-areas:
 		'chair chair chair chair'
 		'swing swing blanket blanket'
-		'poncho poncho pillow pillow'
-		'foot foot foot foot';
+		'poncho poncho pillow pillow';
 	}
 	
 	.productpic{
-		width: 30vw;
-		margin: -5vh 0vw -5vh 12vw;
+		width: 40vw;
+		margin: 0;
 	}
 	
 	#toright,#toright1{
@@ -2234,6 +2138,14 @@ footer p {
 		width: 76vw;
 		margin: 5vh 12vw -13vh;
 		padding: 8vh 0vw 0;
+	}
+	
+	.productswing {
+		margin: 0 0 0 10vw;
+	} 
+	
+	.productblanket {
+		margin: 0 10vw 0 0;
 	}
 	
 	.read-more-button{
@@ -2367,11 +2279,10 @@ footer p {
 		margin-top: 20px;
 	}
 	
-	.other-text {
-		margin-top: 40px;
-	}
 	
 	.other-items {
+		grid-template-areas: 
+			'other1 other2 other3 other4';
 		max-width: 80vw;
 		margin: 0;
 		padding: 0;
@@ -2383,18 +2294,21 @@ footer p {
 		padding: 0;
 	}
 	
+	.other-items a:nth-child(2) {
+		top: -8vh;
+		right: 2vw;
+	}
+	
+	
 	/* --- DOKUMENTATION ------------------------------------------------------------------------- */
 	.grid-container-dokumentation {
-		grid-template-areas: 
-			'logo logo logo'
-			'nav nav nav'
+		grid-template-areas:
 			'banner banner banner'
-			'citat1 citat2 citat3'
+			'cc cc cc'
 			'titel-dokumentation titel-dokumentation titel-dokumentation'
 			'tekst-til-dokumentation tekst-til-dokumentation tekst-til-dokumentation'
 			'titel-samarbejdspartnere titel-samarbejdspartnere titel-samarbejdspartnere'
-			'samarbejdsparnere  samarbejdsparnere  samarbejdsparnere'
-			'foot foot foot';
+			'samarbejdsparnere  samarbejdsparnere  samarbejdsparnere';
 	}
 	
 	.banner-dokumentation img {
@@ -2402,58 +2316,8 @@ footer p {
 		height: auto;
 	}
 	
-	.citat1 {
-		width: 25vw;
-		height: 30vh;
-		margin-left: 8vw;
-	}
-	
-	.citat1 q {
-		font-size: 20px;
-		line-height: 1.5em;
-		font-style: italic;
-	}
-	
-	.citat1 p {
-		margin-top: 4vh;
-		margin-left: 8vw; 
-		font-size: 14px;
-	}
-	
-	.citat2 {
-		width: 25vw;
-		height: 30vh;
-		margin-left: -4vw;
-	}
-	
-	.citat2 q {
-		font-size: 20px;
-		line-height: 1.5em;
-		font-style: italic;
-	}
-	
-	.citat2 p {
-		font-size: 14px;
-		margin-left: 0vw; 
-		margin-top: 4vh;
-	}
-
-	.citat3 {
-		width: 25vw;
-		height: 30vh;
-		margin-left: -1vw;
-	}
-	
-	.citat3 q {
-		font-size: 20px;
-		line-height: 1.5em;
-		font-style: italic;
-	}
-	
-	.citat3 p {
-		font-size: 14px;
-		margin-top: 4vh;
-		margin-left: -3.9vw; 
+	.citat-container {
+		width: 80vw;
 	}
 	
 	.titel-dokumentaion h2 {
@@ -2590,310 +2454,195 @@ footer p {
 		margin-left: -20vw;
 	}
 	
-
 	.samarbejdspartnere {
 		grid-template-areas: 
 			'herning-psykiatri randers-psykiatri horsens-psykiatri lejbjergcentret marco-polo gug-geronto'
 			'attruphøj taleinstitut odense-psykiatri plejecenter hjallerup-skole solkrogen'
 			'ringstedshave headspace dronnig-ingrid-hospital seminarieskolen skovsgård-tranum-skole vester-mariensdal-skole';
+		width: 80vw;
+		margin: 0 8vw 0 12vw;
 	}
 	
 	.herning-psykiatri {
 		width: 10vw;
 		height: auto;
-		margin-top: 5vh;
-		margin-left: 4.5vw;
+		margin: 5vh 0 0 0; 
 	}
 
 	.randers-psykiatri {
 		width: 10vw;
 		height: auto;
-		margin-top: 5vh;
-		margin-left: 1.5vw;
+		margin: 5vh 0 0 0; 
 	}
 
 	.horsens-psykiatri {
 		width: 10vw;
 		height: auto;
-		margin-top: 5vh;
-		margin-left: 1.5vw;
+		margin: 5vh 0 0 0; 
 	}
 
 	.lejbjergcentret {
 		width: 10vw;
 		height: auto;
-		margin-top: 5vh;
-		margin-left: 1.5vw;
+		margin: 5vh 0 0 0; 
 	}
 
 	.marco-polo {
 		width: 10vw;
 		height: auto;
-		margin-top: 5vh;
-		margin-left: 1.5vw;
+		margin: 5vh 0 0 0; 
 	}
 
 	.gug-geronto {
 		width: 10vw;
 		height: auto;
-		margin-top: 5vh;
-		margin-left: 1.5vw;
+		margin: 5vh 0 0 0; 
 	}
 
 	.attruphoj {
 		width: 10vw;
 		height: auto;
-		margin-top: 5vh;
-		margin-left: 4.5vw;
+		margin: 5vh 0 0 0; 
 	}
 
 	.taleinstituttet {
 		width: 10vw;
 		height: auto;
-		margin-top: 5vh;
-		margin-left: 1.5vw;
+		margin: 5vh 0 0 0; 
 	}
 
 	.odense-psykiatri {
 		width: 10vw;
 		height: auto;
-		margin-top: 5vh;
-		margin-left: 1.5vw;
+		margin: 5vh 0 0 0; 
 	}
 
 	.plejecenter-stoberiet {
 		width: 10vw;
 		height: auto;
-		margin-top: 5vh;
-		margin-left: 1.5vw;
+		margin: 5vh 0 0 0; 
 	}
 
 	.hjallerup-skole {
 		width: 10vw;
 		height: auto;
-		margin-top: 5vh;
-		margin-left: 1.5vw;
+		margin: 5vh 0 0 0; 
 	}
 
 	.solkrogen {
 		width: 10vw;
 		height: auto;
-		margin-top: 5vh;
-		margin-left: 1.5vw;
+		margin: 5vh 0 0 0; 
 	}
 
 	.ringstedshave {
 		width: 10vw;
 		height: auto;
-		margin-top: 5vh;
-		margin-left: 4.5vw;
+		margin: 5vh 0 0 0; 
 	}
 
 	.headspace {
 		width: 10vw;
 		height: auto;
-		margin-top: 5vh;
-		margin-left: 1.5vw;
+		margin: 5vh 0 0 0; 
 	}
 
 	.dronning-ingrid-hospital {
 		width: 10vw;
 		height: auto;
-		margin-top: 5vh;
-		margin-left: 1.5vw;
+		margin: 5vh 0 0 0; 
 	}
 
 	.seminarieskolen {
 		width: 8vw;
 		height: auto;
-		margin-top: 5vh;
-		margin-left: 1.5vw;
+		margin: 5vh 0 0 0; 
 	}
 
 	.skovsgard-tranum-skole {
 		width: 10vw;
 		height: auto;
-		margin-top: 5vh;
-		margin-left: 1.5vw;
+		margin: 5vh 0 0 0; 
 	}
 
 	.vester-mariendal-skole {
 		width: 10vw;
 		height: auto;
-		margin-top: 5vh;
-		margin-left: 1.5vw;
+		margin: 5vh 0 0 0; 
 	}
 
-	.herning-psykiatri img {
-		width: auto;
-		height: 8vh;
-	}
-	
-	.randers-psykiatri img {
-		width: auto;
-		height: 8vh;
-	}
-	
-	.horsens-psykiatri img {
-		width: auto;
-		height: 8vh;
-	}
-	
-	.lejbjergcentret img {
-		width: auto;
-		height: 7vh;
-	}
-	
-	.marco-polo img{
-		width: auto;
-		height: 7vh;
-	}
-	
-	.gug-geronto img {
-		width: auto;
-		height: 7vh;
-	}
-
-	.attruphoj img {
-		width: auto;
-		height: 7vh;
-	}
-
-	.taleinstituttet img {
-		width: auto;
-		height: 7vh;
-	}
-
-	.odense-psykiatri img {
-		width: auto;
-		height: 8vh;
-	}
-
-	.plejecenter-stoberiet img {
-		width: auto;
-		height: 7vh;
-	}
-
-	.hjallerup-skole img {
-		width: auto;
-		height: 7vh;
-	}
-
-	.solkrogen img {
-		width: auto;
-		height: 7vh;
-	}
-
-	.ringstedshave img {
-		width: auto;
-		height: 7vh;
-	}
-
-	.headspace img {
-		width: auto;
-		height: 7vh;
-	}
-
-	.dronning-ingrid-hospital img {
-		width: auto;
-		height: 7vh;
-	}
-
-	.seminarieskolen img {
-		width: auto;
-		height: 10vh;
-	}
-
-	.skovsgard-tranum-skole img {
-		width: auto;
-		height: 15vh;
-	}
-
-	.vester-mariendal-skole img {
-		width: 10vw;
-		height: 12vh;
+	.samarbejdspartnere img {
+		width: 8vw;
 	}
 	
 	/* --- OM OS --------------------------------------------------------------------- */
 	.grid-container-om-os {
-		grid-template-areas: 
-			'logo logo logo'
-			'nav nav nav'
+		grid-template-areas:
 			'kristine maya lasse'
 			'vision-mission vision-mission vision-mission' 
 			'titel-historie titel-historie titel-historie'
-			'tekst-til-historie tekst-til-historie tekst-til-historie'
-			'foot foot foot';
+			'tekst-til-historie tekst-til-historie tekst-til-historie';
+		width: 80vw;
 	}
 	
 	.kristine {
-		margin-top: 25vh;
+		margin-top: 15vh;
 	}
 	
 	.kristine img {
-		width: auto;
-		height: 45vh;
+		width: 25vw;
+		height: auto;
 		margin-top: 5vh;
-		margin-left: 10vw;
 	}
 	
 	.kristine h2 {
 		color: #606060;
-		margin-left: 13vw;
 	}
 	
 	.kristine p {
 		color: #D6A900;
 		font-size: 16.5px;
-		font-family: 'Lato', sans-serif;
-		margin-left: 16vw;
-		margin-bottom: 10vh;
+		margin-bottom: 5vh;
 	}
 	
 	.maya {
-		margin-top: 25vh;
+		margin-top: 15vh;
 	}
 	
 	.maya img {
-		width: auto;
-		height: 45vh;
+		width: 25vw;
+		height: auto;
 		margin-top: 5vh;
 	}
 	
 	.maya h2 {
 		color: #606060;
-		margin-left: 5vw;
 	}
 	
 	.maya p {
 		color: #D6A900;
 		font-size: 16.5px;
-		font-family: 'Lato', sans-serif;
-		margin-left: 7.5vw;
-		margin-bottom: 10vh;
+		margin-bottom: 5vh;
 	}
 	
 	.lasse {
-		margin-top: 25vh;
+		margin-top: 15vh;
 	}
 	
 	.lasse img {
-		width: auto;
-		height: 45vh;
+		width: 25vw;
+		height: auto;
 		margin-top: 5vh;
 	}
 	
 	.lasse h2 {
 		color: #606060;
-		margin-left: 5vw;
 	}
 	
 	.lasse p {
 		color: #D6A900;
 		font-size: 16.5px;
-		font-family: 'Lato', sans-serif;
-		margin-left: 9vw;
-		margin-bottom: 10vh;
+		margin-bottom: 5vh;
 	}
 	
 	.vision-mission {
@@ -2939,17 +2688,17 @@ footer p {
 	}
 	
 	.tekst-til-historie {
-		width: 100vw;
+		width: 80vw;
 		height: auto;
+		margin: 0 auto;
 		grid-template-areas: 
 		'kolonne1 kolonne2 kolonne3';
 	}
 
 	.kolonne1 {
-		width: 20vw;
+		width: 25vw;
 		height: auto;
-		margin-left: 11vw;
-		margin-top: 5vh;
+		margin: 5vh 1vw 0;
 	}
 	
 	.kolonne1 h3, p {
@@ -2958,10 +2707,9 @@ footer p {
 	}
 
 	.kolonne2 {
-		width: 20vw;
+		width: 25vw;
 		height: auto;
-		margin-left: -5vw;
-		margin-top: 5vh;
+		margin: 5vh 1vw 0;
 	}
 	
 	.kolonne2 h3, p {
@@ -2970,15 +2718,18 @@ footer p {
 	}
 
 	.kolonne3 {
-		width: 20vw;
+		width: 25vw;
 		height: auto;
-		margin-left: -5vw;
-		margin-top: 5vh;
+		margin: 5vh 1vw 0;
 	}
 
 	.kolonne3 h3, p {
 		line-height: 1.3em;
 		font-family: 'Lato', sans-serif;
+	}
+	
+	.kolonne4 {
+		display: none;
 	}
 	
 	/* --- KONTAKT ----------------------------------------------- */
@@ -3001,11 +2752,12 @@ footer p {
 	
 	.billede-af-stol {
 		width: 50vw;
-		height: 100vh;
+		margin: auto 0 -22px 0;
 	}
 	
 	.billede-af-stol img{
 		width: 50vw;
+		margin: 0;
 	}
 	
 	.titel1 {
@@ -3081,12 +2833,11 @@ footer p {
 	.skriv-til-os {
 		grid-area: skriv-til-os;
 		width: 38vw;
-		height: 70vh;
+		height: 60vh;
 		margin-left: -5vw;
 	}
 	
 	.kontakt-formular {
-		border-radius: 5px;
 		background-color: #f2f2f2;
 		padding: 30px;
 	}
@@ -3095,7 +2846,6 @@ footer p {
 		width: 33.5vw;
 		padding: 12px;
 		border: 1px solid #ccc;
-		border-radius: 4px;
 		margin-top: 2vh;
 		margin-bottom: 2vh;
 		resize: vertical;
@@ -3108,7 +2858,6 @@ footer p {
 		margin-top: 2vh;
 		padding: 2vh 1.5vw;
 		border: none;
-		border-radius: 4px;
 		cursor: pointer;
 		font-family: 'Lato', sans-serif;
 	}
