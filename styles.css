@@ -11,6 +11,10 @@ html, body {
 	font-family: 'Lato', sans-serif;
 }
 
+h1, h2, h3 {
+	font-family: 'Kozuka Gothic PR6N', sans-serif;
+}
+
 .grid-container {
 	display: grid;
 	grid-template-areas: 
@@ -154,6 +158,10 @@ nav ul li a {
 	font-size: 1.5em;
 }
 
+p.tagline {
+	font-style: normal;
+}
+
 .banner {
 	grid-area: banner; 
 }
@@ -165,6 +173,7 @@ nav ul li a {
 
 .titel-firma {
 	grid-area: titel-firma;
+	margin-top: 5vh;
 }
 
 .titel-firma h2 {
@@ -245,12 +254,12 @@ nav ul li a {
 
 .read-more-button{
 	font-family: 'Lato', sans-serif;
-	font-size: 2.5vh;
+	font-size: 16px;
 	width: 25vw;
 	display: inline-block;
 	float: right;
 	margin-right: 10vw;
-	margin-top: 1vh;
+	margin-top: 2vh;
 	padding: 1.5vh;
 	color: #FFF;
 	background-color: #002728;
@@ -264,6 +273,10 @@ a.read-more-button {
 .productpic{
 	width: 100vw;
 	background-color: #f5f5f5;
+}
+
+.produkt-knap {
+	display: none;
 }
 
 #torighttitle, #torighttitle1{
@@ -388,8 +401,34 @@ a.read-more-button {
 
 .other-text {
 	grid-area: other;
-	margin: 40px auto 20px;
+	margin-top: 40px;
 }
+
+.other-text h2 {
+	color: #606060;
+	text-align: center; 
+	position: relative;
+	z-index: -1;
+}
+
+.other-text h2 span {
+	background: #fff;
+	padding: 0px 20px;
+	position: relative;
+	z-index: 1;
+}
+
+.other-text h2:before {
+	background: #ddd;
+	content: "";
+	display: block;
+	height: 0.3vh;
+	position: absolute;
+	top: 2.5vh;
+	width: 90vw;
+	left: 5vw;
+}
+
 
 .other-items {
 	grid-area: other-items;
@@ -576,7 +615,7 @@ a.read-more-button {
 
 .spalte1 {
 	grid-area: spalte1;
-	width: 100vw;
+	width: 90vw;
 	height: auto;
 }
 
@@ -590,7 +629,7 @@ a.read-more-button {
 
 .spalte2 {
 	grid-area: spalte2;
-	width: 100vw;
+	width: 90vw;
 	height: auto;
 }
 
@@ -608,7 +647,7 @@ a.read-more-button {
 
 .spalte3 {
 	grid-area: spalte3;
-	width: 100vw;
+	width: 90vw;
 	height: auto;
 }
 
@@ -654,6 +693,11 @@ a.read-more-button {
 	top: 2.5vh;
 	width: 90vw;
 	left: 5vw;
+}
+
+.titel-samarbejdspartnere p {
+	width: 90vw;
+	margin-left: 5vw;
 }
 
 .samarbejdspartnere {
@@ -1052,13 +1096,12 @@ a.read-more-button {
 
 .billede-af-stol img {
 	width: 100vw;
-	margin-bottom: -20px;
+	margin-bottom: -5px;
 }
 
 .titel1 {
 	grid-area: titel1;
 	width: 99vw;
-	height: 10vh;
 	margin-top: 12vh;
 	z-index: -1;
 }
@@ -1090,7 +1133,6 @@ a.read-more-button {
 .kontakt-info {
 	grid-area: kontakt-info;
 	width: 90vw;
-	height: 30vh;
 	margin-left: 5vw;
 
 }
@@ -1099,36 +1141,59 @@ a.read-more-button {
 	background-color: #f2f2f2;
 	display: grid; 
 	grid-template-areas: 
-		'adresse telefon'
-		'email facebook';
+		'adresse-ikon adresse' 
+		'telefon-ikon telefon'
+		'email-ikon email' 
+		'facebook-ikon facebook';
 	
 }
 
 .ikoner i {
-	margin-left: 5vw;
+	margin-left: 10vw;
 	margin-top: 2vh;
+	font-size: 20px;
 }
 
 .ikoner p {
 	line-height: 1;
+	margin-right: 20vw;
 }
 
 .adresse-ikon {
+	grid-area: adresse-ikon; 
+}
+
+.adresse {
 	grid-area: adresse;
-	margin-left: 4vw; 
 }
 
 .telefon-ikon {
+	grid-area: telefon-ikon;
+}
+
+.telefon {
 	grid-area: telefon;
 }
 
 .email-ikon {
+	grid-area: email-ikon;
+}
+
+.email {
 	grid-area: email;
-	margin-left: 4vw; 
 }
 
 .facebook-ikon {
+	grid-area: facebook-ikon;
+}
+
+.facebook {
 	grid-area: facebook;
+}
+
+i.some {
+	margin: 0 2vw 0 0;
+	font-size: 28px;
 }
 
 .titel2 {
@@ -1165,17 +1230,17 @@ a.read-more-button {
 .skriv-til-os {
 	grid-area: skriv-til-os;
 	width: 90vw;
-	height: 50vh;
 	margin-left: 5vw;
 }
 
 .kontakt-formular {
 	background-color: #f2f2f2;
 	padding: 30px;
+	margin-bottom: 2vh;
 }
 
 input[type=text], select, textarea {
-	width: 83vw;
+	width: 80vw;
 	display: block;
 	padding: 12px;
 	border: 1px solid #ccc;
@@ -1218,20 +1283,30 @@ a.tilbageknap {
 	text-decoration: none;
 }
 
+.kurvtekst{
+	text-align: center;
+	font-size: 4vh;
+}
+
 /* --- FOOTER ---------------------------------------------- */
 
 footer {
 	grid-area: foot;
 	background-color: #002728;
 	width: 100vw;
-	height: 12vh;
+	text-align: center;
 }
 
 footer p {
 	color: white;
 	font-family: 'Lato', sans-serif;
-	margin-left: 5vw;
+	margin: auto 5vw 0;
 	padding-top: 2vh;
+}
+
+footer p:nth-child(2) {
+	padding: 2vh;
+	font-size: 14px;
 }
 
 /* style for tablet (portrait) and upwards */
@@ -1267,11 +1342,19 @@ footer p {
 		color: #D6A900;
 		font-size: 1.5em;
 	}
+	
+	p.tagline {
+		font-style: normal;
+	}
 
 	.banner img { 
 		width: 100vw;
 		height: auto;
 		padding-top: 10vh;
+	}
+	
+	.titel-firma {
+		margin-top: 0;
 	}
 
 	.titel-firma h2 {
@@ -1328,60 +1411,62 @@ footer p {
 	.productpic{
 		width: 44vw;
 		margin: 5vh 4vw;
-		z-index: -3;
 		position: relative;
 	}
 	
 	.chairpic{
 		width: 90vw;
-		margin: 17vh 4vw -13vh;
+		margin: 14vh 5vw 0;
 		padding: 0;
-		z-index: -3;
 		position: relative;
 	}
 	
-	.read-more-button{
-		width: 150px;
-		position: relative;
-		z-index: -1;
-		right: -2vw;
-		top: -10vh;
+	.read-more-button, #chairbutton, .productstitles {
+		display: none;
 	}
 	
-	#chairbutton{
-		top: 3vh;
+	.produkt-knap {
+		display: block;
+		background-color: #002728;
+		color: white;
+		text-align: center;
+		text-decoration: none;
+		padding: 14px 20px;
+		width: 23vw;
+		float: right;
+		position: relative;
+		margin: -6vh 5vw 0;
 	}
 	
-	
-	.productstitles{
-		top: -50vh;
-		left: 0.1vw;
-		position: relative;
-		z-index: -1;
+	.left {
+		margin-right: 10vw; 
 	}
 	
 	.productstitlechair{
-		top: 16vh;
+		top: 14vh;
 		left: 2vw;
 		position: absolute;
-		z-index: -1;
 		font-size: 2em;
 	}
 	
 	.productswing img {
-		margin: 5vh 0 0 4vw;
+		margin: -3vh 0 0 5vw;
 	}
 	
 	.productblanket img {
-		margin: 5vh 4vw 0 0;
+		margin: -3vh 0 0 0;
 	}
 	
 	.productponcho img {
-		margin: 0 0 0 4vw;
+		margin: -3vh 0 0 5vw;
 	}
 	
 	.productspillow img {
-		margin: 0 4vw 0 0;
+		margin: -3vh 5vw 0 0;
+	}
+	
+	.productponcho, .productspillow {
+		margin-bottom: 0;
 	}
 	
   /*--- STOL ------------------------------------------*/
@@ -1593,6 +1678,12 @@ footer p {
 		left: 5vw;
 	}
 	
+	.titel-samarbejdspartnere p {
+		width: 50vw;
+		margin: 0 auto;
+		text-align: center;
+	}
+	
 	.samarbejdspartnere {
 		grid-template-areas: 
 			'herning-psykiatri randers-psykiatri horsens-psykiatri' 'lejbjergcentret marco-polo gug-geronto'
@@ -1773,6 +1864,7 @@ footer p {
 	.maya h2 {
 		color: #606060;
 	}
+	
 	.maya p {
 		color: #D6A900;
 		font-size: 18px;
@@ -1831,13 +1923,13 @@ footer p {
 	}
 
 	.mission h2 {
-		margin-left: 10vw;
+		margin-left: 5vw;
 	}
 
 	.mission p {
 		font-size: 16px;
 		line-height: 1.3em;
-		margin-left: 10vw;
+		margin-left: 5vw;
 		margin-right: 10vw;
 	}
 
@@ -1919,16 +2011,27 @@ footer p {
 	.kolonne4 img {
 		width: 40vw;
 	}
+	
+	/* --- KONTAKT ------------------------------------------ */
+	.ikoner {grid-template-areas: 
+		'adresse-ikon adresse telefon-ikon telefon'
+		'email-ikon email facebook-ikon facebook';
+	}
+	
+	.ikoner i {
+		margin-left: 5vw;
+	}
+	
+	.ikoner p {
+		margin-right: 10vw;
+	}
+	
+	i.some {
+		margin: 0 2vw 0 0;
+	}
+	
 }
 
-/* ----- KONTAKT------------------------------------------------------------*/
-
-
-/* --- KURV ---------------------------------------------------------------------------*/
-	.kurvtekst{
-		text-align: center;
-		font-size: 4vh;
-	}
 
 /* style for tablet (landscape) and upwards */
 @media screen and (min-width: 1024px) {	
@@ -2113,9 +2216,6 @@ footer p {
 		left: 86px;
 	}
 	
-
-	
-	
 	/* --- PRODUKTER --------------------------------------------*/
 	.grid-container-produkter {
 		grid-template-areas:
@@ -2125,66 +2225,57 @@ footer p {
 	}
 	
 	.productpic{
-		width: 40vw;
+		width: 39vw;
 		margin: 0;
 	}
-	
-	#toright,#toright1{
-		width: 30vw;
-		margin-left: 4vw;
-	}
-	
+
 	.chairpic{
-		width: 76vw;
-		margin: 5vh 12vw -13vh;
+		width: 80vw;
+		margin: 18vh 10vw 0;
 		padding: 8vh 0vw 0;
 	}
 	
-	.productswing {
-		margin: 0 0 0 10vw;
+	.productstitlechair{
+		top: 17vh;
+		left: 10vw;
+	}
+	
+	.productswing, .productponcho {
+		margin: 0 0 1vh 10vw;
 	} 
 	
-	.productblanket {
-		margin: 0 10vw 0 0;
+	.productblanket, .productspillow {
+		margin: 0 10vw 1vh 1vw;
 	}
 	
-	.read-more-button{
-		font-size: 3vh;
-		width: auto;
-		padding: 0.5vw;
-		right: 3vw;
-		top:-5vh;
+	.produkt-knap {
+		font-size: 18px;
+		width: 17vw;
+		margin: -11vh 5vw 0;
 	}
 	
-	.read-more-button:hover {
-		background-color: #144041;
+	.left {
+		margin-right: 5vw
 	}
 	
-	#chairbutton{
-		top: -5vh;
-		padding: 0.5vw;
-		width: auto;
-	}
-
-	
-	.productstitles{
-		top:-50vh; 
-		left: 8vw;
-		
+	.chair {
+		margin-right: 15vw;
 	}
 	
-	#torighttitle, #torighttitle1{
-		left: 0;
-		margin-bottom: -0.5vh;
+	.productswing img {
+		margin: 0;
 	}
 	
-	.productstitlechair{
-		top:-1vh;
-		left:10vw;
+	.productblanket img {
+		margin: 0;
 	}
 	
-	.tilbageknap:hover{
-		background-color: #144041;
+	.productponcho img {
+		margin: 0;
+	}
+	
+	.productspillow img {
+		margin: 0;
 	}
 
 	
@@ -2279,6 +2370,11 @@ footer p {
 		margin-top: 20px;
 	}
 	
+	.other-text h2:before {
+		left: 0;
+		width: 80vw;
+		top: 1.5vh;
+	}
 	
 	.other-items {
 		grid-template-areas: 
@@ -2666,7 +2762,7 @@ footer p {
 
 	.vision p {
 		margin-left: 10vw;
-		margin-right: 10vw;
+		margin-right: 5vw;
 		font-family: 'Lato', sans-serif;
 	}
 
@@ -2678,11 +2774,11 @@ footer p {
 
 	.mission h2 {
 		margin-top: 6vh;
-		margin-left: 10vw;
+		margin-left: 5vw;
 	}
 
 	.mission p {
-		margin-left: 10vw;
+		margin-left: 5vw;
 		margin-right: 10vw;
 		font-family: 'Lato', sans-serif;
 	}
@@ -2752,7 +2848,7 @@ footer p {
 	
 	.billede-af-stol {
 		width: 50vw;
-		margin: auto 0 -22px 0;
+		margin: auto 0 -3px 0;
 	}
 	
 	.billede-af-stol img{
@@ -2762,7 +2858,6 @@ footer p {
 	
 	.titel1 {
 		width: 47vw;
-		height: 12vh;
 		margin-top: 17vh;
 		margin-left: -10vw;
 		z-index: -1;
@@ -2792,16 +2887,22 @@ footer p {
 		left: 5vw;
 	}
 	
+	.ikoner {
+		grid-template-areas: 
+			'adresse-ikon adresse'
+			'telefon-ikon telefon'
+			'email-ikon email'
+			'facebook-ikon facebook';
+	}
+	
 	.kontakt-info {
 		grid-area: kontakt-info;
 		width: 38vw;
-		height: 32vh;
 		margin-left: -5vw;
 	}
 	
 	.titel2 {
 		width: 47vw;
-		height: 12vh;
 		margin-left: -10vw;
 		z-index: -1;
 	}
@@ -2833,7 +2934,6 @@ footer p {
 	.skriv-til-os {
 		grid-area: skriv-til-os;
 		width: 38vw;
-		height: 60vh;
 		margin-left: -5vw;
 	}
 	
@@ -2865,13 +2965,17 @@ footer p {
 	input[type=submit]:hover {
 		background-color: #144041;
 	}
+	
+	/* --- KURV ------------------------------------------------------------- */
+	.tilbageknap:hover{
+		background-color: #144041;
+	}
 
 
   	/* --- FOOTER ------------------------------------------------------------------------- */
 	
 	footer {
 		width: 100vw;
-		height: 10vh;
 		text-align: center;
 	}
 }
